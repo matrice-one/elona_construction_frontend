@@ -39,10 +39,12 @@
   <section class="section">
     <router-view/>
   </section>
+
+</div>
+
   <footer class="footer">
     <p class="has-text-centered">Copyright (c) 2021</p>
   </footer>
-</div>
 </template>
 
 <script>
@@ -78,6 +80,22 @@ export default {
 $primary: #004706;
 
 @import '../node_modules/bulma';
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
 
 .lds-dual-ring {
   display: inline-block;

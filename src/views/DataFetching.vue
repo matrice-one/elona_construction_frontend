@@ -1,23 +1,253 @@
 <template>
   <div class="data-fetching">
-      <div class="section is-medium has-text-centered has-text-justified">
-        <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="container">
+        <div class="column is-12">
         <p class="title is-size-2 is-primary mb-6">Data Fetching app</p>
         <p class="subtitle is-size-4">Coming soon!</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer enim neque volutpat ac tincidunt vitae semper. Tristique senectus et netus et malesuada fames ac. Mi ipsum faucibus vitae aliquet nec ullamcorper. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. A diam sollicitudin tempor id eu nisl. Massa id neque aliquam vestibulum morbi blandit cursus. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Nec ullamcorper sit amet risus nullam eget felis. Eu mi bibendum neque egestas congue quisque egestas diam in. Volutpat diam ut venenatis tellus. Cursus turpis massa tincidunt dui ut ornare. Et ligula ullamcorper malesuada proin libero. Porttitor eget dolor morbi non arcu risus quis varius. Lectus sit amet est placerat in.</p>
-        <p class="subtitle">
-          Donec enim diam vulputate ut pharetra sit amet. Proin libero nunc consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Vitae auctor eu augue ut lectus arcu bibendum. Magnis dis parturient montes nascetur ridiculus mus mauris. Eleifend donec pretium vulputate sapien. Commodo odio aenean sed adipiscing. Faucibus purus in massa tempor nec feugiat. Nec sagittis aliquam malesuada bibendum arcu vitae. Ac felis donec et odio. Ultrices tincidunt arcu non sodales neque sodales. Pellentesque dignissim enim sit amet venenatis urna cursus eget.
-        </p>
+
+        <div class="field">
+          <label>Adresse*</label>
+            <div class="control" v-on:keyup.enter="submitForm">
+              <input type="text" class="input" v-model="adresse">
+            </div>
+        </div>
+
+        <div class="notification is-danger mt-4" v-if="errors.length">
+          <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
+        </div>
+        <div>
+          <p> Exemple du format attendu: <i>"Rue des Délices 12a 1203 Genève"</i> </p>
+
+        </div>
+
+        <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
+
+         
+
+      <div class="container" v-if="montre">
+        <div class="column is-12 box my-3" >
+          <div class="table-container" id="resultat" ref="resultat">
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th
+                            v-for="ma in matable"
+                            :key="ma.id">
+                            {{ ma.name}}
+                            </th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <tr>
+                            <td v-for="ma in matable"
+                            :key="ma.id"
+                            >
+                            {{ ma.champ }}
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+
+
+                </div>
+
+
+           <input type="button" value="Copier" class="button is-dark my-1" ref="copy" v-on:click="selectElementContents">
+
+
+        </div>
+         <hr class="navbar-divider mt-6">
+
+
+
+      <button class="button is-warning is-rounded" @click="showConfig"> Configuration Data Fetching </button>
+      <transition name="fade">
+        <div class="notification is-warning is-light my-5" v-if="isOpen" >
+          <div class="columns">
+            
+            <div class="column" >
+              <faireChoix
+              :choix='choix'
+              @choix-submitted="addChoix"
+              />
+            </div>
+
+            <div class="column" >
+              <display-choix :choixselected="choixselected" />
+            </div>
+
+            <div class="column" >
+              
+            </div>
+
+            <div class="column" >
+              
+            </div>
+        <div>
+          {{ choix.profiles[0].selections }}
+          <hr>
+        </div>
+
+          </div>
+
+
+           <p> Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+        </div>
+
+      </transition>
+
         </div>
       </div>
+    </div>  
   </div>
 </template>
 
 <script>
-
+import axios from 'axios'
+import faireChoix from '@/components/faireChoix.vue'
+import displayChoix from '@/components/displayChoix.vue'
+import NewComponent from '@/components/NewComponent.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'DataFetching',
+  components: {
+    NewComponent,
+    faireChoix,
+    displayChoix,
+
+  },
+  data(){
+
+    return{
+      isOpen:false,
+      adresse:'',
+      montre:null,
+      results: null,
+      errors:[],
+      choixselected:[],
+    }
+  },
+  mounted(){
+    document.title='Data Fetching | Elona Construction'
+   
+  },
+  computed: {
+    ...mapState(['choix']),
+    ...mapState(['reference']),
+    matable() {
+      let maselection= this.$store.getters.getSelection
+      let results = this.$store.getters.getResults
+      let toshow = maselection.map(t1 => ({...t1, ...results.find(t2 => t2.id === t1.id)}))
+      return toshow
+    },
+
+
+  },
+  methods:{
+    submitForm() {
+    this.errors = []
+    if (this.adresse === '') {
+    this.errors.push('Adresse manquante')
+    }
+    if (!this.errors.length) {
+      this.$store.commit('setIsLoading', true)
+        
+      this.sendData()
+                    }
+   },
+    async sendData() {
+    this.$store.commit('setIsLoading', true)
+            
+    const data = {
+    'adresse': this.adresse,
+    }
+
+    console.log(data)
+
+      await axios
+                .post('/api/v1/datafetching/', data)
+                .then(response => {
+
+                  console.log(response.data)
+                  
+                  this.montre = true
+                  this.$store.commit('setResults', response.data)
+                  
+
+
+                })
+                .catch(error => {
+                    this.errors.push('Something went wrong. Please try again')
+                    console.log(error)
+                })
+      this.$store.commit('setIsLoading', false)
+      },
+
+ // copy button function
+    selectElementContents() {
+  const elTable = this.$refs.resultat;
+
+  let range, sel;
+
+  // Ensure that range and selection are supported by the browsers
+  if (document.createRange && window.getSelection) {
+
+  range = document.createRange();
+  sel = window.getSelection();
+  // unselect any element in the page
+  sel.removeAllRanges();
+
+  try {
+    range.selectNodeContents(elTable);
+    sel.addRange(range);
+  } catch (e) {
+    range.selectNode(elTable);
+    sel.addRange(range);
+  }
+
+  document.execCommand('copy');
+
+  // tick on click copier
+  let ephemere = this.$refs.copy;
+  ephemere.value = "✔";
+  setTimeout(() => (ephemere.value  = "copier"), 2000);
+}
+    },
+
+
+// collapse config
+showConfig(){
+  this.isOpen = !this.isOpen
+},
+
+//add choix to profile
+addChoix(choixselected){
+  this.choixselected.push(choixselected)
+  console.log(choixselected)
+}
+
+},
 
 }
 </script>
+
+<style scoped>
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+</style>
