@@ -1,19 +1,20 @@
 
 <template>
+
+
 <form class="faireChoix" @submit.prevent="onSubmit">
 <div class="select">
     <select id="champ" v-model="champ" >
         <option
-        v-for="(selection, $selection) of choix.profiles[0].selections"
-        :key="$selection"
-        :value="selection.name"
+        v-for="(selection, $selectionIndex) of reference.profiles[0].selections"
+        :key="$selectionIndex"
+        :value="selection"
         >
         {{ selection.name }}
         </option>
-        <option> TEST</option>
 
     </select>
-<input type="button" value="Ajouter au profil" class="button is-dark my-1" @click="onSubmit" >
+<input type="button" value="Ajouter au profil" class="button is-dark my-1" @click="onSubmit()" >
 </div>
 </form>
 </template>
@@ -29,7 +30,7 @@ export default {
     }
  },
     props: {
-        choix: {
+        reference: {
             type:Object,
             required:true,
         }
@@ -37,11 +38,15 @@ export default {
 
 methods:{
 onSubmit(){
+    if (this.champ === ''){
+        return
+    }
+
     let choixChamp = {
         champ: this.champ,
 
 }
-this.$emit('choix-submitted', choixChamp)
+this.$emit('choix-submitted', this.champ)
 
 this.champ=''
 
@@ -50,6 +55,7 @@ this.champ=''
 },
 
 }
+
 
 
 

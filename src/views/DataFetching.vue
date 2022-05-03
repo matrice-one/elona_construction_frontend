@@ -70,33 +70,67 @@
       <transition name="fade">
         <div class="notification is-warning is-light my-5" v-if="isOpen" >
           <div class="columns">
+
+            <div class="column" >
+                <div class="tag is-large is-primary">
+                  <h1 class="title is-4">Mes Profils</h1>
+                </div>
+                <ul>
+                  <li
+                  v-for="(profile, profileIndex) of choix.profiles"
+                  :key="profileIndex" 
+                  >
+                    <div class="control">
+                      <button class="button  is-rounded my-1 " :class=" { 'is-danger is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} {{ profileIndex  }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
+                    </div>
+                  </li>
+                </ul>
+
+                  <div class="columns">
+                      <div class="column is-narrow is-half my-1">
+                        <input
+                        type="text"
+                        class="input is-primary is-rounded"
+                        
+                        placeholder="Nouveau Profil"
+                        v-model="newProfileName"
+                        @keyup.enter="createProfile"
+                        >
+                    </div>
+                  </div>
+                  
+            </div> 
             
             <div class="column" >
               <faireChoix
-              :choix='choix'
+              :reference="reference"
+              
               @choix-submitted="addChoix"
               />
             </div>
 
             <div class="column" >
-              <display-choix :choixselected="choixselected" />
+              <display-choix 
+              :profileIndexSelected="profileIndexSelected"
+              :choix="choix"
+              :profileSelected="profileSelected"
+              
+              />
             </div>
 
-            <div class="column" >
-              
-            </div>
 
-            <div class="column" >
-              
-            </div>
-        <div>
-          {{ choix.profiles[0].selections }}
-          <hr>
-        </div>
+
+
+
 
           </div>
+          <hr>
+              <div class="control">
+        <button class="button is-primary is-rounded my-1">Sauvegarder les profils</button>
+    </div>
 
-
+          <p> {{ choixselected }} </p>
+          <p> {{ choix.profiles[0].selections[0] }} </p>           
            <p> Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
         </div>
 
@@ -132,6 +166,8 @@ export default {
       results: null,
       errors:[],
       choixselected:[],
+      
+      newProfileName: ''
     }
   },
   mounted(){
@@ -146,6 +182,23 @@ export default {
       let results = this.$store.getters.getResults
       let toshow = maselection.map(t1 => ({...t1, ...results.find(t2 => t2.id === t1.id)}))
       return toshow
+    },
+    profileIndexSelected(){
+      let profilesList = this.$store.getters.getProfiles
+
+      let indexTruthy = profilesList.findIndex(item => item.selected === true)
+      
+
+        return indexTruthy
+    },
+    profileSelected(){
+      let profilesList = this.$store.getters.getProfiles
+
+      let profileSelected = profilesList.find(item => item.selected === true)
+      console.log("this is the selected profile object",profileSelected)
+
+        return profileSelected
+
     },
 
 
@@ -179,8 +232,6 @@ export default {
                   
                   this.montre = true
                   this.$store.commit('setResults', response.data)
-                  
-
 
                 })
                 .catch(error => {
@@ -228,11 +279,37 @@ showConfig(){
 },
 
 //add choix to profile
-addChoix(choixselected){
-  this.choixselected.push(choixselected)
-  console.log(choixselected)
-}
 
+addChoix(choixselected){
+  let profileIndexSelected = this.profileIndexSelected
+
+  this.$store.commit('ADD_SELECTION',choixselected)
+  console.log("this is the thing to add:",choixselected)
+  console.log(profileIndexSelected)
+},
+
+// create new profile
+    createProfile () {
+      this.$store.commit('CREATE_PROFILE', {
+        name: this.newProfileName
+      })
+
+      this.newProfileName = ''
+    },
+// delete profile
+    onDeleteProfile(profileIndex){
+        this.$store.commit('REMOVE_PROFILE',profileIndex)
+
+    },
+
+//select profile
+selectProfile(choix, profileIndex){
+  let iterator = choix.profiles.keys()
+  for (let key of iterator){
+    this.$store.commit('SELECT_PROFILE_TO_F',key)
+  }
+  this.$store.commit('SELECT_PROFILE',profileIndex)
+}
 },
 
 }
