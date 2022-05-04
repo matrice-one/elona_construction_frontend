@@ -14,7 +14,7 @@
     @drop.stop="moveSelection($event, choix.profiles[profileIndexSelected].selections, selectionIndex)"
     >
 
-                <p class="tag is-medium is-primary is-light is-rounded my-1" > {{ profileIndexSelected }} {{  selection.name }} {{ selectionIndex }}<button class="delete" @click="onDeleteSelection(selectionIndex)"></button></p>
+                <p class="tag is-medium is-primary is-light is-rounded my-1" > {{  selection.name }} <button class="delete" @click="onDeleteSelection(selectionIndex)"></button></p>
               
 
     </li>

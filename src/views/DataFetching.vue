@@ -81,7 +81,7 @@
                   :key="profileIndex" 
                   >
                     <div class="control">
-                      <button class="button  is-rounded my-1 " :class=" { 'is-danger is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} {{ profileIndex  }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
+                      <button class="button  is-rounded my-1 " :class=" { 'is-danger is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
                     </div>
                   </li>
                 </ul>
@@ -129,8 +129,7 @@
         <button class="button is-primary is-rounded my-1">Sauvegarder les profils</button>
     </div>
 
-          <p> {{ choixselected }} </p>
-          <p> {{ choix.profiles[0].selections[0] }} </p>           
+        
            <p> Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
         </div>
 
