@@ -107,7 +107,7 @@
                   <h1 class="title is-4 has-text-black">Modifier la sélection :</h1>
                 </div>
             
-              <div class="columns is-multiline">
+              <div class="columns ">
                 <div class="column mb-6" >
                   <faireChoix
                   :reference="reference"
