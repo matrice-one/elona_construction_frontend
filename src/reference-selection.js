@@ -53,7 +53,7 @@ export default{
                     id:9,
                 },
                 {
-                    name: 'Numéro de bâtiment',
+                    name: 'Numéro de bâtiment / parcelle ?',
  
                     id:10,
                 },
@@ -86,6 +86,42 @@ export default{
                     name: "Source information chaleur",
 
                     id:16,
+                },
+                {
+                    name: "IDC moyen deux dernières années",
+
+                    id:17,
+                },
+
+                {
+                    name: "IDC moyen trois dernières années",
+
+                    id:18,
+                },
+                {
+                    name: "SRE",
+
+                    id:19,
+                },
+                {
+                    name: "Zone d'affectation",
+
+                    id:20,
+                },
+                {
+                    name: "Inscription au patrimoine?",
+
+                    id:21,
+                },
+                {
+                    name: "Type secteur géothermie",
+
+                    id:22,
+                },
+                {
+                    name: "Authorisation sondes géothermique",
+
+                    id:23,
                 },
 
             ]
