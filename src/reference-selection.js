@@ -62,6 +62,31 @@ export default{
 
                     id:11,
                 },
+                {
+                    name: "Source d'énergie chauffage 1",
+
+                    id:12,
+                },
+                {
+                    name: "Source d'énergie chauffage 2",
+
+                    id:13,
+                },
+                {
+                    name: "Générateur de chaleur chauffage",
+
+                    id:14,
+                },
+                {
+                    name: "Générateur de chaleur eau",
+
+                    id:15,
+                },
+                {
+                    name: "Source information chaleur",
+
+                    id:16,
+                },
 
             ]
         },
