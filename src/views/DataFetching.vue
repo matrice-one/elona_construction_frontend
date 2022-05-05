@@ -68,12 +68,12 @@
 
       <button class="button is-warning is-rounded" @click="showConfig"> Configuration Data Fetching </button>
       <transition name="fade">
-        <div class="notification is-warning is-light my-5" v-if="isOpen" >
-          <div class="columns">
+        <div class="notification is-warning is-light my-5 " v-if="isOpen" >
+          <div class="columns hauteurmin">
 
-            <div class="column" >
-                <div class="tag is-large is-primary">
-                  <h1 class="title is-4">Mes Profils</h1>
+            <div class="column is-two-fifths" >
+                <div class="content">
+                  <h1 class="title is-4 has-text-black">Mes profils :</h1>
                 </div>
                 <ul>
                   <li
@@ -81,7 +81,7 @@
                   :key="profileIndex" 
                   >
                     <div class="control">
-                      <button class="button  is-rounded my-1 " :class=" { 'is-danger is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
+                      <button class="button  is-rounded my-1 " :class=" { 'is-primary is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
                     </div>
                   </li>
                 </ul>
@@ -100,24 +100,32 @@
                   </div>
                   
             </div> 
+
             
-            <div class="column" >
-              <faireChoix
-              :reference="reference"
-              
-              @choix-submitted="addChoix"
-              />
-            </div>
+            <div class="column is-half">
+                <div class="content">
+                  <h1 class="title is-4 has-text-black">Modifier la sélection :</h1>
+                </div>
+            
+              <div class="columns is-multiline">
+                <div class="column mb-6" >
+                  <faireChoix
+                  :reference="reference"
+                  
+                  @choix-submitted="addChoix"
+                  />
+                </div>
 
-            <div class="column" >
-              <display-choix 
-              :profileIndexSelected="profileIndexSelected"
-              :choix="choix"
-              :profileSelected="profileSelected"
-              
-              />
+                <div class="column" >
+                  <display-choix 
+                  :profileIndexSelected="profileIndexSelected"
+                  :choix="choix"
+                  :profileSelected="profileSelected"
+                  
+                  />
+                </div>
             </div>
-
+            </div>
 
 
 
@@ -130,7 +138,6 @@
     </div>
 
         
-           <p> Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
         </div>
 
       </transition>
@@ -325,5 +332,10 @@ selectProfile(choix, profileIndex){
 .fade-leave-active {
   transition: opacity 0.5s ease;
 }
+
+.hauteurmin{
+    min-height: 60vh;
+}
+
 
 </style>

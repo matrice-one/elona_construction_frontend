@@ -14,7 +14,7 @@
         </option>
 
     </select>
-<input type="button" value="Ajouter au profil" class="button is-dark my-1" @click="onSubmit()" >
+<input type="button" value="Ajouter au profil" class="button is-dark mt-2 mb-4" @click="onSubmit()" >
 </div>
 </form>
 </template>
