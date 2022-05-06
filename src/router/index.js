@@ -38,17 +38,26 @@ const routes = [
   {
     path: '/prospecting',
     name: 'Prospecting',
-    component: Prospecting
+    component: Prospecting,
+    meta: {
+      requireLogin: true
+    }
   },
   {
     path: '/data-fetching',
     name: 'DataFetching',
-    component: DataFetching
+    component: DataFetching,
+    meta: {
+      requireLogin: true
+    }
   },
   {
     path: '/tableau-de-bord',
     name: 'TableauDeBord',
-    component: TableauDeBord
+    component: TableauDeBord,
+    meta: {
+      requireLogin: true
+    }
   },
 
 ]

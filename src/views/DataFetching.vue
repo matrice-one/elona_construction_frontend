@@ -68,10 +68,12 @@
 
       <button class="button is-warning is-rounded" @click="showConfig"> Configuration Data Fetching </button>
       <transition name="fade">
-        <div class="notification is-warning is-light my-5 " v-if="isOpen" >
-          <div class="columns hauteurmin">
+      
+        <div class="notification  is-warning is-light my-5 is-flex-wrap-wrap" v-if="isOpen" >
+          
+          <div class="columns hauteurmin is-multiline">
 
-            <div class="column is-two-fifths" >
+            <div class="column is-one-third" >
                 <div class="content">
                   <h1 class="title is-4 has-text-black">Mes profils :</h1>
                 </div>
@@ -86,6 +88,7 @@
                   </li>
                 </ul>
 
+                  
                   <div class="columns">
                       <div class="column is-narrow is-half my-1">
                         <input
@@ -102,7 +105,7 @@
             </div> 
 
             
-            <div class="column is-half">
+            <div class="column is-two-third">
                 <div class="content">
                   <h1 class="title is-4 has-text-black">Modifier la sélection :</h1>
                 </div>
@@ -121,9 +124,9 @@
                   :profileIndexSelected="profileIndexSelected"
                   :choix="choix"
                   :profileSelected="profileSelected"
-                  
                   />
                 </div>
+                
             </div>
             </div>
 
@@ -137,8 +140,8 @@
         <button class="button is-primary is-rounded my-1">Sauvegarder les profils</button>
     </div>
 
-        
         </div>
+       
 
       </transition>
 
