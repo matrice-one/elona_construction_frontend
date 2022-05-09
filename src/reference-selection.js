@@ -123,6 +123,26 @@ export default{
 
                     id:23,
                 },
+                {
+                    name: "Coordonnée E",
+
+                    id:24,
+                },
+                {
+                    name: "Coordonnée N",
+
+                    id:25,
+                },
+                {
+                    name: "Lien Image",
+
+                    id:26,
+                },
+                {
+                    name: "Egrid",
+
+                    id:27,
+                },
 
             ]
         },
