@@ -2,11 +2,29 @@
   <div class="home">
       <div class="section is-medium has-text-centered has-text-justified">
         <div class="container is-max-desktop">
-        <p class="title is-size-2 is-primary mb-6">Elona Construction, site en construction.</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer enim neque volutpat ac tincidunt vitae semper. Tristique senectus et netus et malesuada fames ac. Mi ipsum faucibus vitae aliquet nec ullamcorper. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. A diam sollicitudin tempor id eu nisl. Massa id neque aliquam vestibulum morbi blandit cursus. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Nec ullamcorper sit amet risus nullam eget felis. Eu mi bibendum neque egestas congue quisque egestas diam in. Volutpat diam ut venenatis tellus. Cursus turpis massa tincidunt dui ut ornare. Et ligula ullamcorper malesuada proin libero. Porttitor eget dolor morbi non arcu risus quis varius. Lectus sit amet est placerat in.</p>
-        <p class="subtitle">
-          Donec enim diam vulputate ut pharetra sit amet. Proin libero nunc consequat interdum varius sit amet. A iaculis at erat pellentesque adipiscing commodo elit. Vitae auctor eu augue ut lectus arcu bibendum. Magnis dis parturient montes nascetur ridiculus mus mauris. Eleifend donec pretium vulputate sapien. Commodo odio aenean sed adipiscing. Faucibus purus in massa tempor nec feugiat. Nec sagittis aliquam malesuada bibendum arcu vitae. Ac felis donec et odio. Ultrices tincidunt arcu non sodales neque sodales. Pellentesque dignissim enim sit amet venenatis urna cursus eget.
-        </p>
+        <p class="title is-size-2 is-primary mb-6">E-cco</p>
+        <p class="subtitle"><b>Fait:</b> Le secteur de la construction en Suisse est l'un des secteurs avec les marges les plus basses. 
+        <br> <b>Idée:</b> Ce n'est pas une fatalité pour ceux qui agissent et trouvent leurs nouveaux clients stratégiquement. </p>
+
+        <button class="button is-primary">Demander un essai pour notre prospecteur automatisé.</button>
+        <br>
+        <br>
+
+        <p class="subtitle"><b>Fait 1 :</b> Les carnets de travails des entreprises actives dans la rénovation sont fluctuants et incertains.
+        <br> <b>Fait 2 : </b>Il est difficile de se faire une place sur le marché dans le canton de Genève qui fonctionne autour des réseaux de connaissance.
+        <br> <b>Idée:</b> Il est possible de s'assurer une base de clients régulière en devenant systèmatiquement le premier à être mise au courant des intentions de rénovation des propriétaires. </p>
+        <button class="button is-primary">Proposer un partenariat pour apparaitre sur notre calculateur de classe gratuit.</button>
+        <br>
+        <br>
+
+        <p class="subtitle"><b>Fait:</b>Les demandes d'autorisation et de construction deviennent de plus en plus complexes, ce qui coûte du temps et de l'argent qui pourrait être alloué autrement.
+        <br> <b>Idée: </b>Le processus de collecte peut-être automatisé, personnalisé, pour ne plus jamais avoir à passer une heure pour seulement préparer un dossier. </p>
+
+        <button class="button is-primary">Demander un essai pour notre collecteur de données.</button>
+        <br>
+        <br>
+
+          
         </div>
       </div>
   </div>
