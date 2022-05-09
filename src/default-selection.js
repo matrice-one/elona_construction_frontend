@@ -151,14 +151,19 @@ export default{
                     id:28,
                 },
                 {
-                    name: "Egrid",
+                    name: "Extrait rdppf pdf complet",
 
                     id:29,
                 },
                 {
-                    name: "Egrid",
+                    name: "Extrait rdppf pdf formulaire",
 
                     id:30,
+                },
+                {
+                    name: "Numéro parcelle",
+
+                    id:31,
                 },
 
 

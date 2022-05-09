@@ -143,6 +143,27 @@ export default{
 
                     id:27,
                 },
+                {
+                    name: "Extrait rdppf pdf compact",
+
+                    id:28,
+                },
+                {
+                    name: "Extrait rdppf pdf complet",
+
+                    id:29,
+                },
+                {
+                    name: "Extrait rdppf pdf formulaire",
+
+                    id:30,
+                },
+                {
+                    name: "Numéro parcelle",
+
+                    id:31,
+                },
+
 
             ]
         },
