@@ -123,6 +123,47 @@ export default{
 
                     id:23,
                 },
+                {
+                    name: "Coordonnée E",
+
+                    id:24,
+                },
+                {
+                    name: "Coordonnée N",
+
+                    id:25,
+                },
+                {
+                    name: "Lien Image",
+
+                    id:26,
+                },
+                {
+                    name: "Egrid",
+
+                    id:27,
+                },
+                {
+                    name: "Extrait rdppf pdf compact",
+
+                    id:28,
+                },
+                {
+                    name: "Extrait rdppf pdf complet",
+
+                    id:29,
+                },
+                {
+                    name: "Extrait rdppf pdf formulaire",
+
+                    id:30,
+                },
+                {
+                    name: "Numéro parcelle",
+
+                    id:31,
+                },
+
 
             ]
         },
