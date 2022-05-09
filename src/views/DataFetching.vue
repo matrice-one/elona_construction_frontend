@@ -137,8 +137,13 @@
           </div>
           <hr>
               <div class="control">
-        <button class="button is-primary is-rounded my-1">Sauvegarder les profils</button>
-    </div>
+                <button class="button is-primary is-rounded my-1" @click="sauvegardeChoix">Sauvegarder les profils</button>
+              </div>
+
+              <div class="control">
+                <button class="button is-primary is-rounded my-1" @click="getChoixData">Get my data</button>
+              </div>
+              <p v-if="testData"> {{testData}} </p>
 
         </div>
        
@@ -174,9 +179,12 @@ export default {
       montre:null,
       results: null,
       errors:[],
+      testErrors:[],
       choixselected:[],
       
-      newProfileName: ''
+      newProfileName: '',
+
+      testData:[],
     }
   },
   mounted(){
@@ -318,7 +326,49 @@ selectProfile(choix, profileIndex){
     this.$store.commit('SELECT_PROFILE_TO_F',key)
   }
   this.$store.commit('SELECT_PROFILE',profileIndex)
-}
+},
+
+//testing get choix
+
+  async getChoixData() {
+  this.$store.commit('setIsLoading', true)
+
+    await axios
+              .get('/api/v1/choix/')
+              .then(response => {
+
+                console.log(response.data)
+                
+                
+                this.testData.push(response.data)
+
+              })
+              .catch(error => {
+                  this.testErrors.push('Something went wrong. Please try again')
+                  console.log(error)
+              })
+    this.$store.commit('setIsLoading', false)
+    },
+
+    async sauvegardeChoix() {
+    this.$store.commit('setIsLoading', true)
+            
+    const data = this.choix
+
+    console.log(data)
+
+      await axios
+                .post('/api/v1/send_json/', data)
+                .then(response => {
+                  
+
+                })
+                .catch(error => {
+                    this.errors.push('Something went wrong. Please try again')
+                    console.log(error)
+                })
+      this.$store.commit('setIsLoading', false)
+      },
 },
 
 }
