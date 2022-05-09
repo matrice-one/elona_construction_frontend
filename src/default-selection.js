@@ -125,6 +125,16 @@ export default{
 
                     id:23,
                 },
+                {
+                    name: "Coordonnée E",
+
+                    id:24,
+                },
+                {
+                    name: "Coordonnée N",
+
+                    id:25,
+                },
 
 
             ]
