@@ -14,7 +14,7 @@ export default createStore({
     isLoading:false,
     choix,
     reference,
-    
+    tore
   
   },
   getters: {

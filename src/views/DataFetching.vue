@@ -3,8 +3,8 @@
     <div class="columns is-multiline">
       <div class="container">
         <div class="column is-12">
-        <p class="title is-size-2 is-primary mb-6">Data Fetching app</p>
-        <p class="subtitle is-size-4">Coming soon!</p>
+        <p class="title is-size-2 is-primary mb-6">Collecteur de données</p>
+        <p class="subtitle is-size-4">Utiliez cet outil qui automatise la collecte de données en allant chercher les données dans toutes les sources d'information officielles (geoadmin, sitg, sam,...)</p>
 
         <div class="field">
           <label>Adresse*</label>

@@ -84,20 +84,8 @@ methods:{
         toSelectionIndex
       })
     },    
-
-
-
-
-
-
-
-},
-
+    }   ,
 }
-
-
-
-
 
 
 </script>
