@@ -235,7 +235,7 @@ export default {
     async sendData() {
     this.$store.commit('setIsLoading', true)
             
-    const data = {
+    let data = {
     'adresse': this.adresse,
     }
 
@@ -339,7 +339,7 @@ selectProfile(choix, profileIndex){
 
                 console.log(response.data)
                 
-                
+                this.testData = []
                 this.testData.push(response.data)
 
               })
@@ -353,12 +353,12 @@ selectProfile(choix, profileIndex){
     async sauvegardeChoix() {
     this.$store.commit('setIsLoading', true)
             
-    const data = this.choix
+    let saveData = {'choix':this.choix}
 
-    console.log(data)
+    console.log(saveData)
 
       await axios
-                .post('/api/v1/send_json/', data)
+                .post('/api/v1/send_json/', saveData)
                 .then(response => {
                   
 
