@@ -115,6 +115,10 @@ export default createStore({
       state.results = payload    
     },
 
+    INITIALIZE_CHOIX(state,payload){
+      state.choix = payload
+    },
+
     initializeStore(state){
       if (localStorage.getItem('token')) {
         state.token = localStorage.getItem('token')

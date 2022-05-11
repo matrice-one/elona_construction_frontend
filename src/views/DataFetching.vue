@@ -189,7 +189,7 @@ export default {
   },
   mounted(){
     document.title='Data Fetching | Elona Construction'
-   
+    this.getChoixData()
   },
   computed: {
     ...mapState(['choix']),
@@ -341,6 +341,7 @@ selectProfile(choix, profileIndex){
                 
                 this.testData = []
                 this.testData.push(response.data)
+                this.$store.commit('INITIALIZE_CHOIX',response.data)
 
               })
               .catch(error => {
