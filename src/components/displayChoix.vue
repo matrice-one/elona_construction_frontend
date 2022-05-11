@@ -1,5 +1,6 @@
 <template>
-<div>
+
+<div >
     <div class="control">
         <div class="tag is-large is-primary is-rounded mb-2"> {{ choix.profiles[profileIndexSelected].name }} </div>
     </div>
@@ -14,11 +15,10 @@
     @drop.stop="moveSelection($event, choix.profiles[profileIndexSelected].selections, selectionIndex)"
     >
 
-                <div class="tag is-medium is-primary is-light is-rounded my-1" > {{  selection.name }} <button class="delete" @click="onDeleteSelection(selectionIndex)"></button></div>
+    <div class="tag is-medium is-primary is-light is-rounded my-1" > {{  selection.name }} <button class="delete" @click="onDeleteSelection(selectionIndex)"></button></div>
               
 
     </li>
-
 </ul>
 
 
@@ -32,7 +32,6 @@
 
 export default {
 
-
     name: 'displayChoix',
  
     data(){
@@ -44,7 +43,7 @@ export default {
     props: {
             choix: {
             type:Object,
-            required:true,
+            
         },
         profileIndexSelected:{
         type:Number
@@ -75,8 +74,6 @@ methods:{
       const fromSelections = this.choix.profiles[fromProfileIndex].selections
       const fromSelectionIndex = e.dataTransfer.getData('from-selection-index')
 
-      console.log("this is the from profile Index aka computed",fromProfileIndex)
-
       this.$store.commit('MOVE_SELECTION', {
         fromSelections,
         toSelections,
@@ -84,11 +81,6 @@ methods:{
         toSelectionIndex
       })
     },    
-
-
-
-
-
 
 
 },

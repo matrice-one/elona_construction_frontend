@@ -100,15 +100,7 @@ export default createStore({
     },
 
     ADD_SELECTION(state, payload) {
-      console.log("that is the payload", payload)
-      //console.log("that is the selection",state.choix.profiles[profileIndexSelected].selections)
-      //state.choix.profiles[profileIndexSelected].selections.push(payload)
-
-      console.log("selected the selection where add",state.choix.profiles.find(item => item.selected === true).selections)
-
-      //choix.profiles[profileIndexSelected].selections.splice(0, 0, payload)
       state.choix.profiles.find(item => item.selected === true).selections.splice(0, 0, payload)
-
     },
 
     setResults(state,payload){

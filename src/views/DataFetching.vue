@@ -69,9 +69,9 @@
       <button class="button is-warning is-rounded" @click="showConfig"> Configuration Data Fetching </button>
       <transition name="fade">
       
-        <div class="notification  is-warning is-light my-5 is-flex-wrap-wrap" v-if="isOpen" >
+        <div class="notification hauteurmin is-warning is-light my-5 is-flex-wrap-wrap" v-if="isOpen" >
           
-          <div class="columns hauteurmin is-multiline">
+          <div class="columns  is-multiline">
 
             <div class="column is-one-third" >
                 <div class="content">
@@ -123,32 +123,24 @@
                   <display-choix 
                   :profileIndexSelected="profileIndexSelected"
                   :choix="choix"
-                  :profileSelected="profileSelected"
+                  
                   />
                 </div>
                 
             </div>
             </div>
 
-
-
-
-
           </div>
           <hr>
               <div class="control">
-                <button class="button is-primary is-rounded my-1" @click="sauvegardeChoix">Sauvegarder les profils</button>
+                <button class="button is-primary is-rounded my-1" ref="sauvegarde" @click="sauvegardeChoix">Sauvegarder les profils</button>
               </div>
 
-              <div class="control">
-                <button class="button is-primary is-rounded my-1" @click="getChoixData">Get my data</button>
-              </div>
-              <p v-if="testData"> {{testData}} </p>
 
         </div>
-       
+       </transition>
 
-      </transition>
+      
 
         </div>
       </div>
@@ -179,12 +171,11 @@ export default {
       montre:null,
       results: null,
       errors:[],
-      testErrors:[],
+      
       choixselected:[],
       
       newProfileName: '',
 
-      testData:[],
     }
   },
   mounted(){
@@ -212,7 +203,7 @@ export default {
       let profilesList = this.$store.getters.getProfiles
 
       let profileSelected = profilesList.find(item => item.selected === true)
-      console.log("this is the selected profile object",profileSelected)
+      //console.log("this is the selected profile object",profileSelected)
 
         return profileSelected
 
@@ -245,7 +236,7 @@ export default {
                 .post('/api/v1/datafetching/', data)
                 .then(response => {
 
-                  console.log(response.data)
+                  //console.log(response.data)
                   
                   this.montre = true
                   this.$store.commit('setResults', response.data)
@@ -282,12 +273,14 @@ export default {
 
   document.execCommand('copy');
 
+
   // tick on click copier
   let ephemere = this.$refs.copy;
   ephemere.value = "✔";
   setTimeout(() => (ephemere.value  = "copier"), 2000);
 }
     },
+
 
 
 // collapse config
@@ -298,11 +291,8 @@ showConfig(){
 //add choix to profile
 
 addChoix(choixselected){
-  let profileIndexSelected = this.profileIndexSelected
-
   this.$store.commit('ADD_SELECTION',choixselected)
-  console.log("this is the thing to add:",choixselected)
-  console.log(profileIndexSelected)
+  //console.log("this is the thing to add:",choixselected)
 },
 
 // create new profile
@@ -336,12 +326,13 @@ selectProfile(choix, profileIndex){
     await axios
               .get('/api/v1/choix/')
               .then(response => {
-
-                console.log(response.data)
+                let djangoChoix = response.data
                 
-                this.testData = []
-                this.testData.push(response.data)
-                this.$store.commit('INITIALIZE_CHOIX',response.data)
+                
+                //this.testData = []
+                //this.testData.push(djangoChoix)
+
+                this.$store.commit('INITIALIZE_CHOIX',djangoChoix)
 
               })
               .catch(error => {
@@ -356,11 +347,15 @@ selectProfile(choix, profileIndex){
             
     let saveData = {'choix':this.choix}
 
-    console.log(saveData)
+    //console.log(saveData)
 
       await axios
                 .post('/api/v1/send_json/', saveData)
                 .then(response => {
+
+                      let SauvegardeEphemere = this.$refs.sauvegarde;
+                      SauvegardeEphemere.innerText = "✔";
+                      setTimeout(() => (SauvegardeEphemere.innerText  = "Sauvegarder les profils"), 2000);
                   
 
                 })
