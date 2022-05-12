@@ -305,6 +305,9 @@ addChoix(choixselected){
     },
 // delete profile
     onDeleteProfile(profileIndex){
+      if (profileIndex === this.profileIndexSelected){
+        return
+      }
         this.$store.commit('REMOVE_PROFILE',profileIndex)
 
     },

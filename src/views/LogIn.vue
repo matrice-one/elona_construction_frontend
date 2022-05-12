@@ -5,10 +5,11 @@
                 <h1 class="title">Log in</h1>
 
                 <form @submit.prevent="submitForm">
+
                     <div class="field">
-                        <label>Username</label>
+                        <label>Email</label>
                         <div class="control">
-                            <input type="text" class="input" v-model="username">
+                            <input type="email" class="input" v-model="username">
                         </div>
                     </div>
 
