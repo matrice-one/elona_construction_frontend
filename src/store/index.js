@@ -100,7 +100,8 @@ export default createStore({
     },
 
     ADD_SELECTION(state, payload) {
-      state.choix.profiles.find(item => item.selected === true).selections.splice(0, 0, payload)
+       //state.choix.profiles.find(item => item.selected === true).selections.splice(-0, 0, payload) //add in the beginning
+       state.choix.profiles.find(item => item.selected === true).selections.push(payload)  //add at the end
     },
 
     setResults(state,payload){

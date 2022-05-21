@@ -45,8 +45,9 @@
                         <tr>
                             <td v-for="ma in matable"
                             :key="ma.id"
+                            v-html="ma.champ"
                             >
-                            {{ ma.champ }}
+                            
                             </td>
 
                         </tr>
@@ -169,7 +170,6 @@ export default {
       isOpen:false,
       adresse:'',
       montre:null,
-      results: null,
       errors:[],
       
       choixselected:[],
@@ -185,10 +185,15 @@ export default {
   computed: {
     ...mapState(['choix']),
     ...mapState(['reference']),
+
+    
     matable() {
       let maselection= this.$store.getters.getSelection
       let results = this.$store.getters.getResults
+
       let toshow = maselection.map(t1 => ({...t1, ...results.find(t2 => t2.id === t1.id)}))
+
+      console.log(toshow)
       return toshow
     },
     profileIndexSelected(){
