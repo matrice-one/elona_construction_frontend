@@ -1,5 +1,121 @@
 <template>
   <div class="home">
+    <section class="hero is-primary is-halfheight">
+      <div class="tile is-ancestor columns is-vcentered">
+        <div class="tile is-4 is-vertical is-half ml-6">
+
+            <p class="title">
+                  Gagnez en efficacité et en flexibilité.
+              </p>
+            <!-- Top tile -->
+
+                  <p class="text is-size-6 mb-4">
+                Notre suite d'outils est la pour aider les acteurs de la transition énergétique dans leurs processus administratifs & marketings.
+              </p>
+
+            <div class="field has-addons">
+              <p class="control">
+                <input class="input" type="text" placeholder="Votre adresse">
+              </p>
+              <p class="control">
+                <a class="button is-link">
+                  Lancez-vous!
+                </a>
+              </p>
+            </div>
+
+        </div>
+        <div class="container is-fluid ">
+          <img src="@src/assets/images/undraw_data_processing.svg" alt class="p-6" />
+        </div>
+      </div>
+
+    </section>
+
+    <section class="hero">
+      <div class="hero-body has-text-centered">
+        <p class="title has-text-black">
+          Pourquoi utiliser les outils E-cco?
+        </p>
+               <p
+              class="text-muted mb-4"
+            >Nam libero tempore cum soluta as nobis est eligendi optio cumque nihile impedite quo minus id quod maxime.</p>
+      </div>
+
+      <div class="tile is-ancestor is-align-items-center is-vcentered">
+        <div class="tile">
+          <div class = "column is-centered p-5">
+            <div class="card is-centere">
+              <div class="card-content">
+                <div class="content">
+                    <h1 class="title is-4">Rapidité et simplicité</h1>
+                    <p>Les entreprises Suisses dépensent entre 15 et 45 minutes par client pour collecter les données nécessaires. <br> <br>Avec E-cco passez à 1 minute. Quelque soit la complexité du dossier.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile">
+          <div class = "column is-centered p-5">
+            <div class="card is-centere">
+              <div class="card-content">
+                <div class="content">
+                    <h1 class="title is-4">Prenez de l'avance sur la compétition </h1>
+                    <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="tile">
+          <div class = "column is-centered p-5">
+            <div class="card is-centere">
+              <div class="card-content">
+                <div class="content">
+                    <h1 class="title is-4">Valorisez vos compétences</h1>
+                      <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile">
+          <div class = "column is-centered p-5">
+            <div class="card is-centere">
+              <div class="card-content">
+                <div class="content">
+                    <h1 class="title is-4">Rapidité et simplicité</h1>
+                    <p>Les entreprises Suisses dépensent entre 15 et 45 minutes par client pour collecter les données nécessaires. <br> <br>Avec E-cco passez à 1 minute. Quelque soit la complexité du dossier.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-halfheight is-light">
+      <p class="title is-4 has-text-black">
+        Toutes les fonctionnalités qu'il vous fallait
+      </p>
+      <div class="tile is-ancestor columns is-vcentered">
+<!-- `          <img src="@/assets/images/Screenshot_datafetcher.png" alt class="img-fluid d-block mx-auto" /> -->
+`
+        <div class="tile is-4 is-vertical is-half ml-6">
+        </div>
+      </div>
+    </section>
+
+  
+  <div class="tile">
+    <!-- This tile will take up the whole vertical space -->
+  </div>
+
+
       <div class="section is-medium has-text-centered has-text-justified">
         <div class="container is-max-desktop">
         <p class="title is-size-2 is-primary mb-6">E-cco</p>
@@ -28,8 +144,9 @@
         </div>
       </div>
   </div>
-</template>
 
+-
+</template>
 <script>
 
 
