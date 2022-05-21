@@ -26,7 +26,7 @@
 
         </div>
         <div class="container is-fluid ">
-          <img src="@src/assets/images/undraw_data_processing.svg" alt class="p-6" />
+          <!-- <img src="@src/assets/images/undraw_data_processing.svg" alt class="p-6" /> -->
         </div>
       </div>
 
