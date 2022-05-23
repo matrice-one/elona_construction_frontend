@@ -98,7 +98,7 @@
         </div>
       </div>
     </section>
-
+<div class="column is-12"> 
     <section class="hero is-halfheight is-light ">
       <p class="title is-4 has-text-black ">
         Toutes les fonctionnalités qu'il vous fallait
@@ -165,11 +165,13 @@
           <button class="button is-primary">Lancez-vous!</button>
           </div>
         </div>
+
+        
         <div class="container is-one-third ">
           <img src="@/assets/images/screenshot_calculateur_class.png" alt class="p-6" />     </div>
       </div>
     </section>
-
+</div>
 
   <section class="hero is-light"> 
     <div class="hero-body has-text-centered">
