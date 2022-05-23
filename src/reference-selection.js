@@ -88,38 +88,38 @@ export default{
                     id:16,
                 },
                 {
-                    name: "IDC moyen deux dernières années",
+                    name: "IDC moyen deux dernières années (GE)",
 
                     id:17,
                 },
 
                 {
-                    name: "IDC moyen trois dernières années",
+                    name: "IDC moyen trois dernières années (GE)",
 
                     id:18,
                 },
                 {
-                    name: "SRE",
+                    name: "SRE (GE)",
 
                     id:19,
                 },
                 {
-                    name: "Zone d'affectation",
+                    name: "Zone d'affectation (GE)",
 
                     id:20,
                 },
                 {
-                    name: "Inscription au patrimoine?",
+                    name: "Inscription au patrimoine? (GE)",
 
                     id:21,
                 },
                 {
-                    name: "Type secteur géothermie",
+                    name: "Type secteur géothermie (GE)",
 
                     id:22,
                 },
                 {
-                    name: "Authorisation sondes géothermique",
+                    name: "Authorisation sondes géothermique (GE)",
 
                     id:23,
                 },
@@ -134,7 +134,7 @@ export default{
                     id:25,
                 },
                 {
-                    name: "Lien Image",
+                    name: "Lien Image (GE)",
 
                     id:26,
                 },
@@ -144,26 +144,75 @@ export default{
                     id:27,
                 },
                 {
-                    name: "Extrait rdppf pdf compact",
+                    name: "Extrait rdppf pdf compact (GE)",
 
                     id:28,
                 },
                 {
-                    name: "Extrait rdppf pdf complet",
+                    name: "Extrait rdppf pdf complet (GE)",
 
                     id:29,
                 },
                 {
-                    name: "Extrait rdppf pdf formulaire",
+                    name: "Extrait rdppf pdf formulaire (GE)",
 
                     id:30,
                 },
                 {
-                    name: "Numéro parcelle",
+                    name: "Numéro parcelle (GE)",
 
                     id:31,
                 },
+                {
+                    name: "Surface totale facades",
 
+                    id:32,
+                },
+                {
+                    name: "Liste des surfaces facades",
+
+                    id:33,
+                },
+                {
+                    name: "Surface totale toits",
+
+                    id:34,
+                },
+                {
+                    name: "List surfaces toits",
+
+                    id:35,
+                },
+                {
+                    name: "Inclinaison moyenne du toit",
+
+                    id:36,
+                },
+                {
+                    name: "Rendement moyens solaire toit",
+
+                    id:37,
+                },
+                {
+                    name: "Demande en chauffage (source UVEK)",
+
+                    id:38,
+                },
+                {
+                    name: "Demande en eau chaude (source UVEK)",
+
+                    id:39,
+                },
+                {
+                    name: "Liste des classes de toit",
+
+                    id:40,
+                },
+                {
+                    name: "Liste des expositions de toit",
+
+                    id:40,
+                },
 
             ]
         },

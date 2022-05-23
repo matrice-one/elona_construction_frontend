@@ -1,10 +1,10 @@
 <template>
   <div class="data-fetching">
     <div class="columns is-multiline">
-      <div class="container">
+      <div class="container p-5">
         <div class="column is-12">
-        <p class="title is-size-2 is-primary mb-6">Data Fetching app</p>
-        <p class="subtitle is-size-4">Coming soon!</p>
+        <p class="title is-size-2 is-primary pt-6">DataFetcher</p>
+        <a class="subtitle is-size-4">Voir la vidéo explicative </a>
 
         <div class="field">
           <label>Adresse*</label>
@@ -21,7 +21,9 @@
 
         </div>
 
+        <div class="container">
         <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
+        </div>
 
          
 
@@ -66,8 +68,9 @@
          <hr class="navbar-divider mt-6">
 
 
-
-      <button class="button is-warning is-rounded" @click="showConfig"> Configuration Data Fetching </button>
+      <div class="container">
+      <button class="button is-warning p-4" @click="showConfig"> Configurer mes sélections</button>
+      </div>
       <transition name="fade">
       
         <div class="notification hauteurmin is-warning is-light my-5 is-flex-wrap-wrap" v-if="isOpen" >
@@ -76,7 +79,7 @@
 
             <div class="column is-one-third" >
                 <div class="content">
-                  <h1 class="title is-4 has-text-black">Mes profils :</h1>
+                  <h1 class="title is-4 has-text-black">Toutes mes selections:</h1>
                 </div>
                 <ul>
                   <li
@@ -84,7 +87,7 @@
                   :key="profileIndex" 
                   >
                     <div class="control">
-                      <button class="button  is-rounded my-1 " :class=" { 'is-primary is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
+                      <button class="button  is-warning my-1 " :class=" { 'is-primary is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
                     </div>
                   </li>
                 </ul>
@@ -94,7 +97,7 @@
                       <div class="column is-narrow is-half my-1">
                         <input
                         type="text"
-                        class="input is-primary is-rounded"
+                        class="input is-warning"
                         
                         placeholder="Nouveau Profil"
                         v-model="newProfileName"
@@ -121,6 +124,9 @@
                 </div>
 
                 <div class="column" >
+                  <div class="content">
+                    <h1 class="title is-4 has-text-black">Configuration selectionnée:</h1>
+                  </div>
                   <display-choix 
                   :profileIndexSelected="profileIndexSelected"
                   :choix="choix"
