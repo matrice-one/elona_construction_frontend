@@ -3,7 +3,8 @@
     <div class="columns is-multiline">
       <div class="container p-5">
         <div class="column is-12">
-        <p class="title is-size-2 is-primary pt-6">DataFetcher</p>
+        <p class="title is-size-2 is-primary pt-6">           <img class="p-1" src="@/assets/images/data_fetcher_logo.png" width="60">
+DataFetcher</p>
         <a class="subtitle is-size-4">Voir la vidéo explicative </a>
 
         <div class="field">
