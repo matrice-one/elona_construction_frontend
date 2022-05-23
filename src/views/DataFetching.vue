@@ -88,7 +88,7 @@ DataFetcher</p>
                   :key="profileIndex" 
                   >
                     <div class="control">
-                      <button class="button  is-warning my-1 " :class=" { 'is-primary is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
+                      <button class="button is-rounded my-1 " :class=" { 'is-primary is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
                     </div>
                   </li>
                 </ul>
