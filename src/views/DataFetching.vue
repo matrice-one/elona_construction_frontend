@@ -30,7 +30,7 @@ DataFetcher</p>
 
       <div class="container" v-if="montre">
         <div class="column is-12 box my-3" >
-          <div class="table-container" id="resultat" ref="resultat">
+          <div class="table-container" id="resultat" >
                 <table class="table is-fullwidth">
                     <thead>
                         <tr>
@@ -44,7 +44,7 @@ DataFetcher</p>
                     </thead>
 
 
-                    <tbody>
+                    <tbody ref="resultat">
                         <tr>
                             <td v-for="ma in matable"
                             :key="ma.id"
@@ -279,7 +279,10 @@ export default {
 
  // copy button function
     selectElementContents() {
+
+
   const elTable = this.$refs.resultat;
+
 
   let range, sel;
 
@@ -307,6 +310,8 @@ export default {
   ephemere.value = "✔";
   setTimeout(() => (ephemere.value  = "copier"), 2000);
 }
+
+
     },
 
 
