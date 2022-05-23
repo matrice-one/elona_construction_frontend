@@ -176,139 +176,56 @@
         <p class="title has-text-black">
           Contactez-nous
         </p>
-    </div>
-
-    <div class="field is-horizontal">
-  <div class="field-label is-normal">
-    <label class="label">From</label>
-  </div>
-  <div class="field-body">
-    <div class="field">
-      <p class="control is-expanded has-icons-left">
-        <input class="input" type="text" placeholder="Name">
-        <span class="icon is-small is-left">
-          <i class="fas fa-user"></i>
-        </span>
-      </p>
-    </div>
-    <div class="field">
-      <p class="control is-expanded has-icons-left has-icons-right">
-        <input class="input is-success" type="email" placeholder="Email" value="alex@smith.com">
-        <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
-        </span>
-        <span class="icon is-small is-right">
-          <i class="fas fa-check"></i>
-        </span>
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="field is-horizontal">
-  <div class="field-label"></div>
-  <div class="field-body">
-    <div class="field is-expanded">
-      <div class="field has-addons">
-        <p class="control">
-          <a class="button is-static">
-            +44
-          </a>
+        <p class="container mx-6">
+          Nous ne sommes qu'au début de l'aventure. Soyez-les premiers à prendre de l'avance & influencez le développement de nos futurs outils.
         </p>
-        <p class="control is-expanded">
-          <input class="input" type="tel" placeholder="Your phone number">
-        </p>
-      </div>
-      <p class="help">Do not enter the first zero</p>
     </div>
-  </div>
-</div>
 
-<div class="field is-horizontal">
-  <div class="field-label is-normal">
-    <label class="label">Department</label>
-  </div>
-  <div class="field-body">
-    <div class="field is-narrow">
-      <div class="control">
-        <div class="select is-fullwidth">
-          <select>
-            <option>Business development</option>
-            <option>Marketing</option>
-            <option>Sales</option>
-          </select>
+
+
+<div class="columns">
+  <div class="column is-8">
+    <div class='container p-5'>
+      <div class="field is-horizontal">
+        <div class="field ml-2">
+          <label class="text is-size-6 has-text-grey-light">Nom de l'entreprise</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
+        </div>
+        <div class="field  ml-2">
+          <label class="text is-size-6 has-text-grey-light">Email entreprise</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div class="field is-horizontal">
-  <div class="field-label">
-    <label class="label">Already a member?</label>
-  </div>
-  <div class="field-body">
-    <div class="field is-narrow">
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="member">
-          Yes
-        </label>
-        <label class="radio">
-          <input type="radio" name="member">
-          No
-        </label>
+      <div class="field p-3">
+        <label class="text is-size-6 has-text-grey-light">Décrivez en quelques mots vos besoins et les <br> services auxquels vous désirez souscrire.*</label>
+        <div class="control">
+            <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+        </div>
       </div>
+
+      <div class="field is-horizontal is-align-content-start ml-2">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+          </div>
     </div>
   </div>
-</div>
-
-<div class="field is-horizontal">
-  <div class="field-label is-normal">
-    <label class="label">Subject</label>
-  </div>
-  <div class="field-body">
-    <div class="field">
-      <div class="control">
-        <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
-      </div>
-      <p class="help is-danger">
-        This field is required
-      </p>
-    </div>
+  <div class="column">
+    
   </div>
 </div>
-
-<div class="field is-horizontal">
-  <div class="field-label is-normal">
-    <label class="label">Question</label>
-  </div>
-  <div class="field-body">
-    <div class="field">
-      <div class="control">
-        <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="field is-horizontal">
-  <div class="field-label">
-    <!-- Left empty for spacing -->
-  </div>
-  <div class="field-body">
-    <div class="field">
-      <div class="control">
-        <button class="button is-primary">
-          Send message
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  </section>
+</section>
   
   <div class="tile">
     <!-- This tile will take up the whole vertical space -->
@@ -317,7 +234,6 @@
 
   </div>
 
--
 </template>
 <script>
 import DisplayChoix from '../components/displayChoix.vue'
