@@ -211,7 +211,12 @@ export default{
                 {
                     name: "Liste des expositions de toit",
 
-                    id:40,
+                    id:41,
+                },
+                {
+                    name: "Authorisations trouvées",
+
+                    id:42,
                 },
 
             ]
