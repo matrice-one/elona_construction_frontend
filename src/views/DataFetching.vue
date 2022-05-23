@@ -115,6 +115,7 @@
                 <div class="column mb-6" >
                   <faireChoix
                   :reference="reference"
+                  :chooseFromSelection="chooseFromSelection"
                   
                   @choix-submitted="addChoix"
                   />
@@ -213,7 +214,22 @@ export default {
         return profileSelected
 
     },
+    chooseFromSelection(){
+      let profilesList = this.$store.getters.getProfiles
 
+      let profileSelected = profilesList.find(item => item.selected === true)
+      let selectionSelected = profileSelected.selections
+
+      let referenceSelection = this.$store.getters.getReferenceSelection
+
+      // Use map to get a simple array of "id" values. Ex: [1,4] (like a mask in python)
+      let yFilter = selectionSelected.map(itemY => { return itemY.id; });
+
+      // Use filter and "not" includes to filter the full dataset by the filter dataset's val.
+      let filteredX = referenceSelection.filter(itemX => !yFilter.includes(itemX.id));
+
+        return filteredX
+    },  
 
   },
   methods:{

@@ -28,6 +28,9 @@ export default createStore({
     getProfiles(state){
       return state.choix.profiles
     },
+    getReferenceSelection(state){
+      return state.reference.profiles[0].selections
+    },
 
 
     giveSelection (state) {
