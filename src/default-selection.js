@@ -218,6 +218,11 @@ export default{
 
                     id:42,
                 },
+                {
+                    name: "Image geoadmin",
+
+                    id:43,
+                },
 
             ]
         },        
