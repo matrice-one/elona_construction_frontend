@@ -61,7 +61,7 @@
     </div>
   </nav> -->
 <div id="wrapper">
-  <nav class="navbar is-primary">
+  <nav class="navbar is-primary is-fixed-top">
     <div class="navbar-brand">
 
       <a class="navbar-item" href="/">
@@ -162,12 +162,18 @@ footer {
   margin-top: auto;
 }
 
+nav {
+  position: fixed;
+}
+
 .lds-dual-ring {
+  margin: 35px;
   display: inline-block;
   width: 80px;
   height: 80px;
 }
 .lds-dual-ring:after {
+
   content: " ";
   display: block;
   width: 64px;
