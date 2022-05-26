@@ -1,18 +1,18 @@
 
 <template>
   <div class="home">
-    <div class="hero is-primary is-halfheight py-5">
-      <div class="columns is-centered">
-        <div class="column is-11">
+    <div class="hero is-primary is-fullheight py-5 is-vcentered">
+      <!-- <div class="columns is-centered ">
+        <div class="column is-11"> -->
       <div class="tile is-ancestor columns is-vcentered">
-        <div class="tile is-4 is-vertical is-half ml-6">
+        <div class="column is-half ml-6">
 
-            <p class="title">
-                Developper des outils pour les professionels de la rénovation énergétique à Genevois.
+            <p class="title is-1">
+                Nous developpons des outils pour les professionels de la rénovation énergétique Genevois.
             </p>
             <!-- Top tile -->
 
-              <p class="text is-size-6 mb-4">
+              <p class="text is-size-4 mb-4">
                 Le challenge est grand, nous vous aidons à ne vous soucier plus que de mettre à profit vos compétences.
               </p>
 
@@ -33,8 +33,8 @@
 
         </div>
       </div>
-    </div>
-    </div>
+    <!-- </div>
+    </div> -->
     </div>
 
     <section class="hero">
@@ -42,7 +42,7 @@
         <div class="column is-11">
       
           <div class="hero-body has-text-centered">
-            <p class="title has-text-black">
+            <p class="title is-2 has-text-primary has-text-centered">
               Pourquoi utiliser les outils E-cco?
             </p>
             <p class="text-muted mb-4">
@@ -123,11 +123,12 @@
       <div class="columns is-centered">
       <div class="column is-11 "> 
         <div class="container mb-6">
-      <p class="title is-2 has-text-primary has-text-centered">
+      <p class="title is-2 has-text-primary has-text-centered p-6">
         Toutes les fonctionnalités qu'il vous fallait
       </p>
         </div>
       <div class="tile is-ancestor columns is-vcentered">
+        
         <div class="column is-half has-text-centered">
           <img src="@/assets/images/Screenshot_datafetcher.png" alt class="p-0" />
        </div>
@@ -167,7 +168,7 @@
         <div class="column is-11">
 
           <div class="tile is-ancestor">
-            <div class="tile is-parent">
+            <div class="tile is-parent p-6">
               <div class="tile is-child is-half">
 
                 <div class="content">
@@ -175,7 +176,7 @@
                     RENOV SIMULATEUR
                   </p>
                   <p class="title is-4">
-                        Enfin un 
+                        Enfin une 
                       <b>vitrine</b> 
                       ou vous payez pour être vus <br>
                       <b>par ceux qui désirent vous voir.</b>
@@ -199,7 +200,7 @@
               </div>
             </div>
             
-            <div class="tile ">
+            <div class="tile p-6 ">
               <img src="@/assets/images/screenshot_calculateur_class.png" alt class="p-6" />
             </div>
           </div>
@@ -208,7 +209,7 @@
     </section>
 
 
-    <section class="hero my-5">
+    <!-- <section class="hero my-5">
       <div class="columns is-centered">
         <div class="column is-11">
 
@@ -248,7 +249,7 @@
                 </div>
               </article>
             </div>
-            <!-- 
+ 
             <div class="tile is-parent is-2 mx-4">
               <article class="tile is-child box">
                 <p class="title is-4">Third column</p>
@@ -260,15 +261,15 @@
             </div>
             -->
 
-          </div>
+          <!-- </div>
           </div>
         </div>
       </div>
     </section>
+ --> 
 
 
-
-<div class="section hero is-light mt-6">
+ <!--<div class="section hero is-light mt-6">
   <div class="columns is-centered">
     <div class="column is-11">
       <div class=" tile is-ancestor">
@@ -304,17 +305,16 @@
                   necessitatibus saepe eveniet ut et voluptates repudiandae sint molestiae non recusandae itaque Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab reprehenderit eum dolores quas doloribus laudantium perspiciatis sit saepe mollitia porro nostrum sunt, alias minus dignissimos quibusdam reiciendis laborum omnis nemo..
                 </p>
               <i class="fa fa-box"></i>
-              <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
+              <font-awesome-icon icon="fa-regular fa-box-check" /> 
               <p class="text-muted font-size-15 mb-4"> Selection des variables désirées parmis les sources SITG, geoadmin, SAP, ... </p>
 
               <i class="fa fa-clock"></i>
-              <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
+              <font-awesome-icon icon="fa-regular fa-box-check" /> 
               <p class="text-muted font-size-15 mb-4"> Selection des variables désirées parmis les sources SITG, geoadmin, SAP, ... </p>
             
               <div class="container">
               <button class="button is-primary">Lancez-vous!</button>
               </div>
-        
 
             </div>
           </div> 
@@ -323,12 +323,7 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
+ 
 
   <section class="section hero is-light ">
     <div class="columns is-centered">
@@ -389,7 +384,7 @@
       </div>
     </div>
   </div> 
-</section>
+</section> -->
   
   <div class="tile">
     <!-- This tile will take up the whole vertical space -->
