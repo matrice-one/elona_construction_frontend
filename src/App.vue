@@ -106,7 +106,26 @@
 </div>
 
   <footer class="footer">
-    <p class="has-text-centered">Copyright (c) 2021</p>
+    <div class="container mx-6">
+        <img class="" src="@/assets/images/Logo2_ecco.png" width="224" height="56">
+    </div>
+    <div class="tile is-horizontal">
+    <div class="column is-6">
+      <div class="container mx-6">
+      <p class="text has-text-white"> E-cco est une startup genevoise créée en 2022. Elle a pour but de participer à la transition énergétique en soutenant ses acteurs à pratiquer leur profession en bénéficiant des avancées digitales. </p>
+      </div>
+    </div>
+    <div class="column is-3">
+    </div>
+        <div class="column is-3 has-text-white mx-3">
+      <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br><br>
+      Telephone: <br> 00 41 76 368 18 38 <br><br>
+      Email: <br>marketing.team@energie-expert.ch <br><br>
+      </p>
+    </div>
+
+    </div>
+    <!-- <p class="has-text-centered">Copyright (c) 2021</p> -->
   </footer>
 </template>
 
@@ -142,6 +161,7 @@ export default {
 <style lang="scss">
 $primary: #1d492b;
 $link: #f89209;
+$footer-background-color : #1d492b;
 
 
 @import '../node_modules/bulma';
