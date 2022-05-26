@@ -8,12 +8,12 @@
         <div class="tile is-4 is-vertical is-half ml-6">
 
             <p class="title">
-                  Gagnez en efficacité et en flexibilité.
-              </p>
+                Developper des outils pour les professionels de la rénovation énergétique à Genevois.
+            </p>
             <!-- Top tile -->
 
-                  <p class="text is-size-6 mb-4">
-                Notre suite d'outils est la pour aider les acteurs de la transition énergétique dans leurs processus administratifs & marketings.
+              <p class="text is-size-6 mb-4">
+                Le challenge est grand, nous vous aidons à ne vous soucier plus que de mettre à profit vos compétences.
               </p>
 
             <div class="field has-addons">
@@ -46,7 +46,9 @@
               Pourquoi utiliser les outils E-cco?
             </p>
             <p class="text-muted mb-4">
-              Nam libero tempore cum soluta as nobis est eligendi optio cumque nihile impedite quo minus id quod maxime.</p>
+              Le secteur de la rénovation à Genève est nouveau et il manque d'outil spécifiques pour mener à bien sa mission. <br>
+              E-cco est la première startup Genevoise à mettre ses compétences digitales à leur service.
+            </p> 
           </div>
 
           <div class="tile is-ancestor is-align-items-center is-vcentered">
@@ -56,8 +58,8 @@
                   <div class="card is-centered">
                     <div class="card-content">
                       <div class="content">
-                          <h1 class="title is-4">Rapidité et simplicité</h1>
-                          <p>Les entreprises Suisses dépensent entre 15 et 45 minutes par client pour collecter les données nécessaires. <br> <br>Avec E-cco passez à 1 minute. Quelque soit la complexité du dossier.</p>
+                          <h1 class="title is-4">Gagnez du temps sur le montage de vos dossiers</h1>
+                          <p>Entrez votre adresse et notre algorithme collecte toutes les données nécessaires (Geoadmin, SAD, SITG, ....) automatiquement.</p>
                       </div>
                     </div>
                   </div>
@@ -70,9 +72,9 @@
                 <div class="card is-centered">
                   <div class="card-content">
                     <div class="content">
-                        <h1 class="title is-4">Prenez de l'avance sur la compétition </h1>
+                        <h1 class="title is-4"> Augmentez votre visibilité </h1>
                         <p>
-                          Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                        Recevez un devis de la part des propriétaires qui visitent notre plateforme SimulateurRenov et faites automatiquement un appel d'offre pré-rempli. 
                         </p>
                     </div>
                   </div>
@@ -84,9 +86,9 @@
                 <div class="card is-centered">
                   <div class="card-content">
                     <div class="content">
-                        <h1 class="title is-4">Valorisez vos compétences</h1>
+                        <h1 class="title is-4">Renforcez votre stratégie  avec la Big Data </h1>
                           <p>
-                          Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                          Il est difficile d'obtenir une vision d'ensemble sur le marché, l'offre, la demande, ou encore la compétition. Nous avons l'information et la technologie, posez nous vos questions.
                         </p>
                     </div>
                   </div>
@@ -98,8 +100,10 @@
                 <div class="card is-centered">
                   <div class="card-content">
                     <div class="content">
-                        <h1 class="title is-4">Rapidité et simplicité</h1>
-                        <p>Les entreprises Suisses dépensent entre 15 et 45 minutes par client pour collecter les données nécessaires. <br> <br>Avec E-cco passez à 1 minute. Quelque soit la complexité du dossier.</p>
+                        <h1 class="title is-4">Donnez vie à vos idées</h1>
+                          <p>
+                          Nous avons les compétences mais vous avez la connaissance du terrain et de ses difficultés. Faites nous part de votre vision et nous ferons de notre mieux pour l'excecuter. 
+                        </p>
                     </div>
                   </div>
                 </div>
@@ -117,12 +121,14 @@
 
     <section class="hero is-halfheight is-light py-5 my-5">
       <div class="columns is-centered">
-      <div class="column is-11"> 
-      <p class="title is-4 has-text-black ">
+      <div class="column is-11 "> 
+        <div class="container mb-6">
+      <p class="title is-2 has-text-primary has-text-centered">
         Toutes les fonctionnalités qu'il vous fallait
       </p>
+        </div>
       <div class="tile is-ancestor columns is-vcentered">
-        <div class="container p-0">
+        <div class="column is-half has-text-centered">
           <img src="@/assets/images/Screenshot_datafetcher.png" alt class="p-0" />
        </div>
         <div class="tile is-4 is-vertical is-half ml-6">
@@ -136,8 +142,7 @@
               <b>Data Fetcher</b>
           </p>
                       <p class="text-muted font-size-15 mb-4">
-              Temporibus autem quibusdam et aut officiis debitis aut rerum a
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint molestiae non recusandae itaque.
+              Nous avons collecté des millions de point de données sur le territoire Genevois pour que vous n'ayez pas à copier coller l'information sur chaque site officiel.
             </p>
           <i class="fa fa-box"></i>
           <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
@@ -145,7 +150,7 @@
 
           <i class="fa fa-clock"></i>
           <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
-          <p class="text-muted font-size-15 mb-4"> Selection des variables désirées parmis les sources SITG, geoadmin, SAP, ... </p>
+          <p class="text-muted font-size-15 mb-4"> Création de profils réutilisables pour une selection personalisé en fonction de chacun de vos services. </p>
         
           <div class="container p-5">
           <button class="button is-primary">Lancez-vous!</button>
@@ -163,29 +168,28 @@
 
           <div class="tile is-ancestor">
             <div class="tile is-parent">
-              <div class="tile is-child is-10">
+              <div class="tile is-child is-half">
 
                 <div class="content">
                   <p class="title is-6">
-                    DATA FETCHER
+                    RENOV SIMULATEUR
                   </p>
                   <p class="title is-4">
-                        Des ensembles de données
-                      <b>personalisables</b> &
-                      <b>duplicables</b> avec notre
-                      <b>Data Fetcher</b>
+                        Enfin un 
+                      <b>vitrine</b> 
+                      ou vous payez pour être vus <br>
+                      <b>par ceux qui désirent vous voir.</b>
                   </p>
                   <p class="text-muted font-size-15 mb-4">
-                      Temporibus autem quibusdam et aut officiis debitis aut rerum a
-                      necessitatibus saepe eveniet ut et voluptates repudiandae sint molestiae non recusandae itaque.
+                      En aidant les propriétaires à se renseigner sur leur projet de rénovation, nous recevons des demandes de devis de la part des propriétaires qui désirent aller plus loin. Soyez celui qui recoit le devis.
                     </p>
                   <i class="fa fa-box"></i>
                   <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
-                  <p class="text-muted font-size-15 mb-4"> Selection des variables désirées parmis les sources SITG, geoadmin, SAP, ... </p>
+                  <p class="text-muted font-size-15 mb-4"> Reception de demande de devis par email</p>
 
                   <i class="fa fa-clock"></i>
                   <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
-                  <p class="text-muted font-size-15 mb-4"> Selection des variables désirées parmis les sources SITG, geoadmin, SAP, ... </p>
+                  <p class="text-muted font-size-15 mb-4"> Pré-remplissage du devis grace à la combinaison des données renseignées et du Big Data. </p>
                 
                   <div class="container p-5">
                     <button class="button is-primary">Lancez-vous!</button>
@@ -195,7 +199,7 @@
               </div>
             </div>
             
-            <div class="container is-one-third ">
+            <div class="tile ">
               <img src="@/assets/images/screenshot_calculateur_class.png" alt class="p-6" />
             </div>
           </div>

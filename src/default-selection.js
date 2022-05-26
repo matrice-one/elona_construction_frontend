@@ -134,7 +134,7 @@ export default{
                     id:25,
                 },
                 {
-                    name: "Lien Image (GE)",
+                    name: "Lien image zone large (GE)",
 
                     id:26,
                 },
@@ -219,9 +219,14 @@ export default{
                     id:42,
                 },
                 {
-                    name: "Image geoadmin",
+                    name: "Lien image geoadmin",
 
                     id:43,
+                },
+                {
+                    name: "Lien orthophoto 2020 bâtiment (GE)",
+
+                    id:44,
                 },
 
             ]

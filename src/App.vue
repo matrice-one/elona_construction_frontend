@@ -140,7 +140,7 @@ export default {
 
 
 <style lang="scss">
-$primary: #004706;
+$primary: #1d492b;
 $link: #f89209;
 
 
