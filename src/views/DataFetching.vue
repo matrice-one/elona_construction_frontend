@@ -11,8 +11,8 @@
 
         <div class="field">
           <label>Adresse*</label>
-          <form @submit.prevent="submitForm" v-on:keyup.enter="submitForm">
-            <div class="control" >
+          <form @submit.prevent="submitForm" v-on:keyup.enter="submitForm" autocomplete="on">
+            <div class="control" autocomplete="on">
               
               <input type="text" class="input" v-model="adresse" name="address" autocomplete="on">
              

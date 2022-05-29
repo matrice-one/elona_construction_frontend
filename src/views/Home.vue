@@ -1,19 +1,21 @@
 
 <template>
   <div class="home">
-    <div class="hero is-primary is-fullheight py-5 is-vcentered">
-      <!-- <div class="columns is-centered ">
-        <div class="column is-11"> -->
-      <div class="tile is-ancestor columns is-vcentered">
-        <div class="column is-half ml-6">
+    <div class="hero is-primary is-fullheight pt-6 ">
+      <div class="columns is-centered ">
+        <div class="column is-11">
+      <div class="tile is-ancestor pt-6 ">
+        <div class="columns is-centered is-multiline ">
+        <div class="tile is-parent is-vertical is-6">
+          <div class="tile is-child pt-6">
 
+            <div class="content heropadding">
             <p class="title is-1">
                 Nous developpons des outils pour les professionels de la rénovation énergétique Genevois.
             </p>
-            <!-- Top tile -->
 
               <p class="text is-size-4 mb-4">
-                Le challenge est grand, nous vous aidons à ne vous soucier plus que de mettre à profit vos compétences.
+                Le challenge est grand, nous vous aidons à vous concentrer sur l'essentiel.
               </p>
 
             <div class="field has-addons">
@@ -26,18 +28,26 @@
                 </a>
               </p>
             </div>
+          </div>
 
         </div>
-        <div class="container is-fluid ">
-          <img src="@/assets/images/undraw_data_processing_yrrv.svg" alt class="p-6" />
-
         </div>
+
+        <div class="tile is-parent is-6">
+          <div class="tile is-child pt-6">
+        <div class="container is-fluid heropadding">
+          <img src="@/assets/images/undraw_data_processing_yrrv.svg" alt class="p-0" />
+        </div>
+        </div>
+        </div>
+
       </div>
-    <!-- </div>
-    </div> -->
+      </div>
+    </div>
+    </div> 
     </div>
 
-    <section class="hero">
+    <section class="hero pb-5">
       <div class="columns is-centered">
         <div class="column is-11">
       
@@ -50,7 +60,7 @@
               E-cco est la première startup Genevoise à mettre ses compétences digitales à leur service.
             </p> 
           </div>
-
+<!--
           <div class="tile is-ancestor is-align-items-center is-vcentered">
             <div class="tile is-parent">
               <div class="tile is-child">
@@ -58,7 +68,7 @@
                   <div class="card is-centered">
                     <div class="card-content">
                       <div class="content">
-                          <h1 class="title is-4">Gagnez du temps sur le montage de vos dossiers</h1>
+                          <h1 class="title nobreak is-4">Gagnez du temps sur le montage de vos dossiers</h1>
                           <p>Entrez votre adresse et notre algorithme collecte toutes les données nécessaires (Geoadmin, SAD, SITG, ....) automatiquement.</p>
                       </div>
                     </div>
@@ -72,7 +82,7 @@
                 <div class="card is-centered">
                   <div class="card-content">
                     <div class="content">
-                        <h1 class="title is-4"> Augmentez votre visibilité </h1>
+                        <h1 class="title nobreak is-4"> Augmentez votre visibilité </h1>
                         <p>
                         Recevez un devis de la part des propriétaires qui visitent notre plateforme SimulateurRenov et faites automatiquement un appel d'offre pré-rempli. 
                         </p>
@@ -86,7 +96,7 @@
                 <div class="card is-centered">
                   <div class="card-content">
                     <div class="content">
-                        <h1 class="title is-4">Renforcez votre stratégie  avec la Big Data </h1>
+                        <h1 class="title nobreak is-4">Renforcez votre stratégie  avec la Big Data </h1>
                           <p>
                           Il est difficile d'obtenir une vision d'ensemble sur le marché, l'offre, la demande, ou encore la compétition. Nous avons l'information et la technologie, posez nous vos questions.
                         </p>
@@ -100,7 +110,7 @@
                 <div class="card is-centered">
                   <div class="card-content">
                     <div class="content">
-                        <h1 class="title is-4">Donnez vie à vos idées</h1>
+                        <h1 class="title nobreak is-4">Donnez vie à vos idées</h1>
                           <p>
                           Nous avons les compétences mais vous avez la connaissance du terrain et de ses difficultés. Faites nous part de votre vision et nous ferons de notre mieux pour l'excecuter. 
                         </p>
@@ -110,9 +120,61 @@
               </div>
             </div>
           </div>
+-->
 
-       </div>   
-      </div>  
+      
+      
+          <div class="tile is-ancestor">
+            <div class="columns is-centered is-multiline ">
+
+            <div class="tile is-parent is-3">
+              <article class="tile is-child box">
+                <p class="title is-4 nobreak">Pourquoi utiliser les outils E-cco?</p>
+                 <div class="content ">
+                  <p>
+                    Le secteur de la rénovation à Genève est nouveau et il manque d'outil spécifiques pour mener à bien sa mission. <br>
+                    E-cco est la première startup Genevoise à mettre ses compétences digitales à leur service.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="tile is-parent is-3 ">
+              <article class="tile is-child box ">
+                  <p class="title is-4 nobreak">Gagnez du temps sur le montage de vos dossiers</p>
+                  <div class="content">
+                  <p>
+                    Entrez votre adresse et notre algorithme collecte toutes les données nécessaires (Geoadmin, SAD, SITG, ....) automatiquement.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="tile is-parent is-3">
+              <article class="tile is-child box">
+                <p class="title is-4 nobreak">Augmentez votre visibilité</p>
+                <div class="content">
+                  <p>
+                    Recevez un devis de la part des propriétaires qui visitent notre plateforme SimulateurRenov et faites automatiquement un appel d'offre pré-rempli. 
+                  </p>
+                </div>
+              </article>
+            </div>
+            
+            <div class="tile is-parent is-3">
+              <article class="tile is-child box">
+                <p class="title is-4 nobreak">Donnez vie à vos idées</p>
+                <div class="content">
+                  <p>
+                    Nous avons les compétences mais vous avez la connaissance du terrain et de ses difficultés. Faites nous part de votre vision et nous ferons de notre mieux pour l'excecuter. 
+                  </p>
+                </div>
+              </article>
+            </div>
+
+          </div>   
+        </div>
+            </div>
+          </div>
+
     </section>
 
 
@@ -163,47 +225,66 @@
     </section>
 
 
-    <section class="hero">   
+    <section class="hero py-6 heropadding">   
       <div class="columns is-centered">
         <div class="column is-11">
 
           <div class="tile is-ancestor">
-            <div class="tile is-parent p-6">
-              <div class="tile is-child is-half">
 
-                <div class="content">
-                  <p class="title is-6">
-                    RENOV SIMULATEUR
-                  </p>
-                  <p class="title is-4">
-                        Enfin une 
-                      <b>vitrine</b> 
-                      ou vous payez pour être vus <br>
-                      <b>par ceux qui désirent vous voir.</b>
-                  </p>
-                  <p class="text-muted font-size-15 mb-4">
-                      En aidant les propriétaires à se renseigner sur leur projet de rénovation, nous recevons des demandes de devis de la part des propriétaires qui désirent aller plus loin. Soyez celui qui recoit le devis.
+            <div class="columns is-centered is-multiline">
+
+              <div class="tile is-parent is-6">
+                <div class="tile is-child">
+                  <div class="content">
+                    <p class="title is-6">
+                      RENOV SIMULATEUR
                     </p>
-                  <i class="fa fa-box"></i>
-                  <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
-                  <p class="text-muted font-size-15 mb-4"> Reception de demande de devis par email</p>
+                    <p class="title is-4">
+                          Enfin une 
+                        <b>vitrine</b> 
+                        ou vous payez pour être vus <br>
+                        <b>par ceux qui désirent vous voir.</b>
+                    </p>
+                    <p class="text-muted font-size-15 mb-4">
+                        En aidant les propriétaires à se renseigner sur leur projet de rénovation, nous recevons des demandes de devis de la part des propriétaires qui désirent aller plus loin. Soyez celui qui recoit le devis.
+                      </p>
+                    <i class="fa fa-box"></i>
+                    <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
+                    <p class="text-muted font-size-15 mb-4"> Reception de demande de devis par email</p>
 
-                  <i class="fa fa-clock"></i>
-                  <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
-                  <p class="text-muted font-size-15 mb-4"> Pré-remplissage du devis grace à la combinaison des données renseignées et du Big Data. </p>
-                
-                  <div class="container p-5">
-                    <button class="button is-primary">Lancez-vous!</button>
+                    <i class="fa fa-clock"></i>
+                    <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
+                    <p class="text-muted font-size-15 mb-4"> Pré-remplissage du devis grace à la combinaison des données renseignées et du Big Data. </p>
+                  
+                    <div class="container">
+                      <button class="button is-primary">Lancez-vous!</button>
+                    </div>
+
                   </div>
-
                 </div>
               </div>
+
+              <div class="tile is-parent is-2 ">
+                <div class="tile is-child">
+                  <div class="content">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="tile is-parent is-4 ">
+                <div class="tile is-child">
+                  <div class="image is-3by2">
+                    <img src="@/assets/images/screenshot_calculateur_class.png" />
+                  </div>
+                </div>
+              </div>
+
             </div>
-            
-            <div class="tile p-6 ">
-              <img src="@/assets/images/screenshot_calculateur_class.png" alt class="p-6" />
-            </div>
+
           </div>
+
         </div>
       </div>
     </section>
@@ -412,6 +493,13 @@ export default {
 
 .nobreak{
   word-break: keep-all;
+}
+
+@media only screen and (max-width: 767px) {
+.heropadding{ 
+  padding: 2rem;
+}
+
 }
 
 </style>
