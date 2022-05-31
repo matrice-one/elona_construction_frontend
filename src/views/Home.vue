@@ -2,8 +2,8 @@
 <template>
   <div class="home">
     <div class="hero is-primary is-fullheight pt-6 ">
-      <div class="columns is-centered ">
-        <div class="column is-11">
+      <div class="columns is-centered  ">
+        <div class="column is-11 is-vcentered">
       <div class="tile is-ancestor pt-6 ">
         <div class="columns is-centered is-multiline ">
         <div class="tile is-parent is-vertical is-6">
