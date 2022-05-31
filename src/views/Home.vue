@@ -3,7 +3,7 @@
   <div class="home">
     <div class="hero is-primary is-fullheight pt-6 ">
       <div class="columns is-centered ">
-        <div class="column is-11">
+        <div class="column is-10">
       <div class="tile is-ancestor pt-6 ">
         <div class="columns is-centered is-multiline ">
         <div class="tile is-parent is-vertical is-6">
@@ -49,7 +49,7 @@
 
     <section class="hero pb-5">
       <div class="columns is-centered">
-        <div class="column is-11">
+        <div class="column is-10">
       
           <div class="hero-body has-text-centered">
             <p class="title is-2 has-text-primary has-text-centered">
@@ -227,7 +227,7 @@
 
     <section class="hero py-6 heropadding">   
       <div class="columns is-centered">
-        <div class="column is-11">
+        <div class="column is-10">
 
           <div class="tile is-ancestor">
 
