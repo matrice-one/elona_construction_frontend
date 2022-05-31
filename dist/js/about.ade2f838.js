@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkelonavue"]=self["webpackChunkelonavue"]||[]).push([[443],{5834:function(n,e,u){u.r(e),u.d(e,{default:function(){return f}});var a=u(6252);const t={class:"about"},r=(0,a._)("h1",null,"This is an about page",-1),s=[r];function c(n,e){return(0,a.wg)(),(0,a.iD)("div",t,s)}var o=u(3744);const i={},l=(0,o.Z)(i,[["render",c]]);var f=l}}]);
+//# sourceMappingURL=about.ade2f838.js.map
