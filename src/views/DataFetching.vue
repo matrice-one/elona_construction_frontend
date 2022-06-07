@@ -267,7 +267,7 @@ export default {
                 .post('/api/v1/datafetching/', data)
                 .then(response => {
 
-                  //console.log(response.data)
+                  console.log("RESPONSE SERVER: ",response.data)
                   
                   this.montre = true
                   this.$store.commit('setResults', response.data)
