@@ -1,20 +1,89 @@
 <template>
-<div id="wrapper">
-  <nav class="navbar is-primary">
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <router-link to="/" class="navbar-item is-size-3"><strong>Elona Construction</strong></router-link>
+      <a class="navbar-item" href="#">
+        <img src="@/assets/images/Logo2_ecco.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+
+        <a class="navbar-item">
+          Documentation
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+<div id="wrapper">
+
+
+
+
+<div class="has-navbar-fixed-top ">
+  <nav class="navbar is-primary is-fixed-top">
+    <div class="navbar-brand navbarpadding ">
+
+      <a class="navbar-item " href="/">
+        <img class=" mt-2 " src="@/assets/images/Logo2_ecco.png" width="112" height="28">
+      </a>
 
       <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>        
+        <span aria-hidden="true"></span>
       </a>
     </div>
     <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active':showMobileMenu}">
       <div class="navbar-start">  
 
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end navbarpadding ">
         <router-link to="/prospecting" class="navbar-item">Prospecting</router-link>
         <router-link to="/data-fetching" class="navbar-item">Data-Fetching</router-link>
         <div class="navbar-item">
@@ -32,19 +101,68 @@
       </div>
     </div>
   </nav>
-    <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading': $store.state.isLoading }">
-      <div class="lds-dual-ring"></div>
-    </div>
 
-  <section class="section">
+  <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading': $store.state.isLoading }">
+  <div class="lds-dual-ring"></div>
+
+
+</div>
+</div>
+
+<div class="contenu">
     <router-view/>
-  </section>
+</div>
 
 </div>
 
   <footer class="footer">
-    <p class="has-text-centered">Copyright (c) 2021</p>
+    <div class="columns is-centered">
+      <div class="column is-11">
+
+        <div class="tile is-ancestor">
+          <div class="columns is-centered is-multiline">
+
+            <div class="tile is-parent is-vertical is-5">
+              <div class="tile is-child">
+                <div class="image is-128x128">
+                  <img  src="@/assets/images/Logo2_ecco.png">
+                </div>
+                <div class="container">
+                  <p class="text has-text-white"> E-cco est une startup genevoise créée en 2022. Elle a pour but de participer à la transition énergétique en soutenant ses acteurs à pratiquer leur profession en bénéficiant des avancées digitales. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tile is-parent is-3">
+              <div class="tile is-child">
+                <div class="content has-text-white">
+                  <p class="title has-text-white is-5">  <br><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="tile is-parent is-4">
+              <div class="tile is-child">
+                <div class="content has-text-white">
+                  <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br>
+                    Téléphone: <br> 00 41 76 368 18 38 <br><br>
+                    Email: <br>marketing.team@energie-expert.ch <br><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+    </div>
+   </div> 
   </footer>
+
 </template>
 
 <script>
@@ -77,11 +195,17 @@ export default {
 
 
 <style lang="scss">
-$primary: #004706;
+$primary: #1d492b;
+$link: #f89209;
+$footer-background-color : #1d492b;
+$navbar-padding-horizontal:size-2;
+$navbar-item-color:#f89209;
+
+
 
 @import '../node_modules/bulma';
 
-body {
+.contenu {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -93,16 +217,19 @@ body {
   flex-direction: column;
 }
 
-footer {
-  margin-top: auto;
-}
+
+
+
+
 
 .lds-dual-ring {
+  margin: 35px;
   display: inline-block;
   width: 80px;
   height: 80px;
 }
 .lds-dual-ring:after {
+
   content: " ";
   display: block;
   width: 64px;
@@ -129,5 +256,13 @@ footer {
   &.is-loading {
     height: 80px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbarpadding{
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
 }
 </style>

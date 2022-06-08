@@ -6,7 +6,7 @@
 <div class="select">
     <select id="champ" v-model="champ" >
         <option
-        v-for="(selection, $selectionIndex) of reference.profiles[0].selections"
+        v-for="(selection, $selectionIndex) of chooseFromSelection"
         :key="$selectionIndex"
         :value="selection"
         >
@@ -30,8 +30,7 @@ export default {
     }
  },
     props: {
-        reference: {
-            type:Object,
+        chooseFromSelection: {
             required:true,
         }
     },

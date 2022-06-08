@@ -27,6 +27,9 @@ export default createStore({
     getProfiles(state){
       return state.choix.profiles
     },
+    getReferenceSelection(state){
+      return state.reference.profiles[0].selections
+    },
 
 
     giveSelection (state) {
@@ -99,19 +102,16 @@ export default createStore({
     },
 
     ADD_SELECTION(state, payload) {
-      console.log("that is the payload", payload)
-      //console.log("that is the selection",state.choix.profiles[profileIndexSelected].selections)
-      //state.choix.profiles[profileIndexSelected].selections.push(payload)
-
-      console.log("selected the selection where add",state.choix.profiles.find(item => item.selected === true).selections)
-
-      //choix.profiles[profileIndexSelected].selections.splice(0, 0, payload)
-      state.choix.profiles.find(item => item.selected === true).selections.splice(0, 0, payload)
-
+       //state.choix.profiles.find(item => item.selected === true).selections.splice(-0, 0, payload) //add in the beginning
+       state.choix.profiles.find(item => item.selected === true).selections.push(payload)  //add at the end
     },
 
     setResults(state,payload){
       state.results = payload    
+    },
+
+    INITIALIZE_CHOIX(state,payload){
+      state.choix = payload
     },
 
     initializeStore(state){

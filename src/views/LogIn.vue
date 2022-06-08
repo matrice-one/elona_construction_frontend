@@ -1,14 +1,15 @@
 <template>
     <div class="page-log-in">
-        <div class="columns">
-            <div class="column is-4 is-offset-4">
+        <div class="columns my-6">
+            <div class="column is-4 is-offset-4 my-6">
                 <h1 class="title">Log in</h1>
 
                 <form @submit.prevent="submitForm">
+
                     <div class="field">
-                        <label>Username</label>
+                        <label>Email</label>
                         <div class="control">
-                            <input type="text" class="input" v-model="username">
+                            <input type="email" class="input" v-model="username">
                         </div>
                     </div>
 
@@ -31,7 +32,7 @@
 
                     <hr>
 
-                    Or <router-link to="/sign-up">click here</router-link> to sign up!
+                    Ou contacter nous à l'adresse email suivante <a href="mailto:marketing.team@energie-expert.ch">marketing.team@energie-expert.ch</a> pour créer un compte.
                 </form>
             </div>
         </div>
