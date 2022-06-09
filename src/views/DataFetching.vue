@@ -49,9 +49,9 @@
                         </tr>
                     </thead>
 
-
-                    <tbody ref="resultat">
-                        <tr>
+                  
+                    <tbody >
+                        <tr ref="resultat">
                             <td v-for="ma in matable"
                             :key="ma.id"
                             v-html="ma.champ"
@@ -76,7 +76,7 @@
 
 
       <div class="container">
-      <button class="button is-warning p-4" @click="showConfig"> Configurer mes sélections</button>
+      <button class="button is-warning p-4" @click="showConfig"> Configurer mes profils</button>
       </div>
       <transition name="fade">
       
@@ -86,7 +86,7 @@
 
             <div class="column is-one-third" >
                 <div class="content">
-                  <h1 class="title is-4 has-text-black">Mes selections:</h1>
+                  <h1 class="title is-4 has-text-black">Mes profils:</h1>
                 </div>
                 <ul>
                   <li
@@ -106,7 +106,7 @@
                         type="text"
                         class="input is-warning"
                         
-                        placeholder="Nouveau Profil"
+                        placeholder="Nouveau profil"
                         v-model="newProfileName"
                         @keyup.enter="createProfile"
                         >
@@ -118,7 +118,7 @@
             
             <div class="column is-two-third">
                 <div class="content">
-                  <h1 class="title is-4 has-text-black">Modifier la sélection :</h1>
+                  <h1 class="title is-4 has-text-black">Modifier le profil :</h1>
                 </div>
             
               <div class="columns ">
@@ -190,7 +190,7 @@ export default {
     }
   },
   mounted(){
-    document.title='Data Fetching | Elona Construction'
+    document.title='Data Fetcher | Elona Construction'
     this.getChoixData()
   },
   computed: {

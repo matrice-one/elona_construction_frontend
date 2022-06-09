@@ -85,7 +85,7 @@
       </div>
       <div class="navbar-end navbarpadding ">
         <router-link to="/prospecting" class="navbar-item">Prospecting</router-link>
-        <router-link to="/data-fetching" class="navbar-item">Data-Fetching</router-link>
+        <router-link to="/data-fetching" class="navbar-item">Data Fetcher</router-link>
         <div class="navbar-item">
           <div class="buttons">
             <template v-if="$store.state.isAuthenticated">
@@ -128,7 +128,9 @@
                   <img  src="@/assets/images/Logo2_ecco.png">
                 </div>
                 <div class="container">
-                  <p class="text has-text-white"> E-cco est une startup genevoise créée en 2022. Elle a pour but de participer à la transition énergétique en soutenant ses acteurs à pratiquer leur profession en bénéficiant des avancées digitales. </p>
+                  <p class="text has-text-white">
+                    E-cco est une startup genevoise créée en 2022. Elle participe à la transition énergétique en faisant bénéficier ses acteurs des avancées numériques.
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,9 +143,17 @@
                 </div>
               </div>
             </div>
+            <div class="tile is-parent is-1">
+              <div class="tile is-child">
+                <div class="content has-text-white">
+                  <p class="title has-text-white is-5">  <br><br>
+                  </p>
+                </div>
+              </div>
+            </div>
 
 
-            <div class="tile is-parent is-4">
+            <div class="tile is-parent is-3">
               <div class="tile is-child">
                 <div class="content has-text-white">
                   <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br>
