@@ -7,17 +7,17 @@
           <img class="p-1" src="@/assets/images/data_fetcher_logo.png" width="60">
           Data Fetcher
         </p>
-
+        
 
         <div class="field">
           <label>Adresse*</label>
           <form @submit.prevent="submitForm" v-on:keyup.enter="submitForm" autocomplete="on">
             <div class="control" autocomplete="on">
-
+              
               <input type="text" class="input" v-model="adresse" name="address" autocomplete="on">
-
+             
             </div>
-            </form>
+            </form> 
         </div>
 
         <div class="notification is-danger mt-4" v-if="errors.length">
@@ -32,7 +32,7 @@
         <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
         </div>
 
-
+         
 
       <div class="container" v-if="montre">
         <div class="column is-12 box my-3" >
@@ -56,7 +56,7 @@
                             :key="ma.id"
                             v-html="ma.champ"
                             >
-
+                            
                             </td>
 
                         </tr>
@@ -79,9 +79,9 @@
       <button class="button is-warning p-4" @click="showConfig"> Configurer mes sélections</button>
       </div>
       <transition name="fade">
-
+      
         <div class="notification hauteurmin is-warning is-light my-5 is-flex-wrap-wrap" v-if="isOpen" >
-
+          
           <div class="columns  is-multiline">
 
             <div class="column is-one-third" >
@@ -91,7 +91,7 @@
                 <ul>
                   <li
                   v-for="(profile, profileIndex) of choix.profiles"
-                  :key="profileIndex"
+                  :key="profileIndex" 
                   >
                     <div class="control">
                       <button class="button my-1 " :class=" { 'is-primary is-selected': profile.selected }" @click.self="selectProfile(choix, profileIndex)"> {{  profile.name }} <button class="delete is-small ml-2" @click.self="onDeleteProfile(profileIndex)" > </button> </button>
@@ -99,46 +99,46 @@
                   </li>
                 </ul>
 
-
+                  
                   <div class="columns">
                       <div class="column is-narrow is-half my-1">
                         <input
                         type="text"
                         class="input is-warning"
-
+                        
                         placeholder="Nouveau Profil"
                         v-model="newProfileName"
                         @keyup.enter="createProfile"
                         >
                     </div>
                   </div>
+                  
+            </div> 
 
-            </div>
-
-
+            
             <div class="column is-two-third">
                 <div class="content">
                   <h1 class="title is-4 has-text-black">Modifier la sélection :</h1>
                 </div>
-
+            
               <div class="columns ">
                 <div class="column mb-6" >
                   <faireChoix
                   :reference="reference"
                   :chooseFromSelection="chooseFromSelection"
-
+                  
                   @choix-submitted="addChoix"
                   />
                 </div>
 
                 <div class="column" >
-                  <display-choix
+                  <display-choix 
                   :profileIndexSelected="profileIndexSelected"
                   :choix="choix"
-
+                  
                   />
                 </div>
-
+                
             </div>
             </div>
 
@@ -152,11 +152,11 @@
         </div>
        </transition>
 
-
+      
 
         </div>
       </div>
-    </div>
+    </div>  
   </div>
 </template>
 
@@ -182,9 +182,9 @@ export default {
       adresse:'',
       montre:null,
       errors:[],
-
+      
       choixselected:[],
-
+      
       newProfileName: '',
 
     }
@@ -197,7 +197,7 @@ export default {
     ...mapState(['choix']),
     ...mapState(['reference']),
 
-
+    
     matable() {
       let maselection= this.$store.getters.getSelection
       let results = this.$store.getters.getResults
@@ -211,7 +211,7 @@ export default {
       let profilesList = this.$store.getters.getProfiles
 
       let indexTruthy = profilesList.findIndex(item => item.selected === true)
-
+      
 
         return indexTruthy
     },
@@ -239,7 +239,7 @@ export default {
       let filteredX = referenceSelection.filter(itemX => !yFilter.includes(itemX.id));
 
         return filteredX
-    },
+    },  
 
   },
   methods:{
@@ -250,14 +250,14 @@ export default {
     }
     if (!this.errors.length) {
       this.$store.commit('setIsLoading', true)
-
+        
       this.sendData()
                     }
    },
     async sendData() {
     this.$store.commit('setIsLoading', true)
-
-    const data = {
+            
+    let data = {
     'adresse': this.adresse,
     }
 
@@ -268,7 +268,7 @@ export default {
                 .then(response => {
 
                   console.log("RESPONSE SERVER: ",response.data)
-
+                  
                   this.montre = true
                   this.$store.commit('setResults', response.data)
 
@@ -366,8 +366,8 @@ selectProfile(choix, profileIndex){
               .get('/api/v1/choix/')
               .then(response => {
                 let djangoChoix = response.data
-
-
+                
+                
                 //this.testData = []
                 //this.testData.push(djangoChoix)
 
@@ -383,19 +383,19 @@ selectProfile(choix, profileIndex){
 
     async sauvegardeChoix() {
     this.$store.commit('setIsLoading', true)
-
-    const data = this.choix
+            
+    let saveData = {'choix':this.choix}
 
     //console.log(saveData)
 
       await axios
-                .post('/api/v1/send_json/', data)
+                .post('/api/v1/send_json/', saveData)
                 .then(response => {
 
                       let SauvegardeEphemere = this.$refs.sauvegarde;
                       SauvegardeEphemere.innerText = "✔";
                       setTimeout(() => (SauvegardeEphemere.innerText  = "Sauvegarder les profils"), 2000);
-
+                  
 
                 })
                 .catch(error => {
