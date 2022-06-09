@@ -163,71 +163,33 @@ export default{
 
                     id:31,
                 },
+                
                 {
-                    name: "Surface totale facades",
+                    name: "Authorisations trouvées",
 
                     id:32,
                 },
                 {
-                    name: "Liste des surfaces facades",
+                    name: "Lien image geoadmin",
 
                     id:33,
                 },
                 {
-                    name: "Surface totale toits",
+                    name: "Lien orthophoto 2020 bâtiment (GE)",
 
                     id:34,
                 },
                 {
-                    name: "List surfaces toits",
+                    name: "Surface toit",
 
                     id:35,
                 },
                 {
-                    name: "Inclinaison moyenne du toit",
+                    name: "Surface facades",
 
                     id:36,
                 },
-                {
-                    name: "Rendement moyens solaire toit",
 
-                    id:37,
-                },
-                {
-                    name: "Demande en chauffage (source UVEK)",
-
-                    id:38,
-                },
-                {
-                    name: "Demande en eau chaude (source UVEK)",
-
-                    id:39,
-                },
-                {
-                    name: "Liste des classes de toit",
-
-                    id:40,
-                },
-                {
-                    name: "Liste des expositions de toit",
-
-                    id:41,
-                },
-                {
-                    name: "Authorisations trouvées",
-
-                    id:42,
-                },
-                {
-                    name: "Lien image geoadmin",
-
-                    id:43,
-                },
-                {
-                    name: "Lien orthophoto 2020 bâtiment (GE)",
-
-                    id:44,
-                },
 
             ]
         },
