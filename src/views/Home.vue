@@ -2,47 +2,50 @@
 <template>
   <div class="home">
     <div class="hero is-primary is-fullheight pt-6 ">
-      <div class="columns is-centered  ">
-        <div class="column is-11 is-vcentered">
-      <div class="tile is-ancestor pt-6 ">
-        <div class="columns is-centered is-multiline ">
-        <div class="tile is-parent is-vertical is-6">
-          <div class="tile is-child pt-6">
+      <div class="tile">
+        <div class="columns is-centered is-vcentered ">
+          <div class="column is-10 is-vcentered">
+              <div class="tile is-ancestor pt-6 ">
+                <div class="columns is-centered is-multiline ">
+                <div class="tile is-parent is-vertical is-6">
+                  <div class="tile is-child pt-6">
 
-            <div class="content heropadding">
-            <p class="title is-1">
-                Nous developpons des outils pour les professionels de la rénovation énergétique Genevois.
-            </p>
+                    <div class="content heropadding">
+                    <p class="title is-1">
+                        Nous developpons des outils pour les professionels de la rénovation énergétique Genevois.
+                    </p>
 
-              <p class="text is-size-4 mb-4">
-                Le challenge est grand, nous vous aidons à vous concentrer sur l'essentiel.
-              </p>
+                      <p class="text is-size-4 mb-4">
+                        Le challenge est grand, nous vous aidons à vous concentrer sur l'essentiel.
+                      </p>
 
-            <div class="field has-addons">
+                    <div class="field has-addons">
 
-              <p class="control">
-                <a class="button is-link" href="mailto:marketing.team@energie-expert.ch">
-                  Lancez-vous!
-                </a>
-              </p>
-            </div>
+                      <p class="control">
+                        <a class="button is-link" href="mailto:marketing.team@energie-expert.ch">
+                          Lancez-vous!
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+                </div>
+                
+
+                <div class="tile is-parent is-6">
+                  <div class="tile is-child pt-6">
+                <div class="container is-fluid heropadding">
+                  <img src="@/assets/images/undraw_data_processing_yrrv.svg" alt class="p-0" />
+                </div>
+                </div>
+                </div>
+
+              </div>
+              </div>
           </div>
-
-        </div>
-        </div>
-
-        <div class="tile is-parent is-6">
-          <div class="tile is-child pt-6">
-        <div class="container is-fluid heropadding">
-          <img src="@/assets/images/undraw_data_processing_yrrv.svg" alt class="p-0" />
-        </div>
-        </div>
-        </div>
-
+        </div> 
       </div>
-      </div>
-    </div>
-    </div> 
     </div>
 
     <section class="hero pb-5">
@@ -63,20 +66,9 @@
           <div class="tile is-ancestor">
             <div class="columns is-centered is-multiline ">
 
-            <div class="tile is-parent is-3">
-              <article class="tile is-child box">
-                <p class="title is-4 nobreak">Pourquoi utiliser les outils E-cco?</p>
-                 <div class="content ">
-                  <p>
-                    Le secteur de la rénovation à Genève est nouveau et il manque d'outil spécifiques pour mener à bien sa mission. <br>
-                    E-cco est la première startup Genevoise à mettre ses compétences digitales à leur service.
-                  </p>
-                </div>
-              </article>
-            </div>
             <div class="tile is-parent is-3 ">
-              <article class="tile is-child box ">
-                  <p class="title is-4 nobreak">Gagnez du temps sur le montage de vos dossiers</p>
+              <article class="tile is-child  ">
+                  <p class="title is-4 nobreak">Moins de temps perdu</p>
                   <div class="content">
                   <p>
                     Entrez votre adresse et notre algorithme collecte toutes les données nécessaires (Geoadmin, SAD, SITG, ....) automatiquement.
@@ -85,8 +77,8 @@
               </article>
             </div>
             <div class="tile is-parent is-3">
-              <article class="tile is-child box">
-                <p class="title is-4 nobreak">Augmentez votre visibilité</p>
+              <article class="tile is-child ">
+                <p class="title is-4 nobreak">Plus de visibilité</p>
                 <div class="content">
                   <p>
                     Recevez un devis de la part des propriétaires qui visitent notre plateforme SimulateurRenov et faites automatiquement un appel d'offre pré-rempli. 
@@ -96,8 +88,8 @@
             </div>
             
             <div class="tile is-parent is-3">
-              <article class="tile is-child box">
-                <p class="title is-4 nobreak">Donnez vie à vos idées</p>
+              <article class="tile is-child ">
+                <p class="title is-4 nobreak">Plus de possibilités</p>
                 <div class="content">
                   <p>
                     Nous avons les compétences mais vous avez la connaissance du terrain et de ses difficultés. Faites nous part de votre vision et nous ferons de notre mieux pour l'excecuter. 
@@ -119,7 +111,7 @@
 
     <section class="hero is-halfheight is-light py-5 my-5">
       <div class="columns is-centered">
-      <div class="column is-11 "> 
+      <div class="column is-10 "> 
         <div class="container mb-6">
       <p class="title is-2 has-text-primary has-text-centered p-6">
         Toutes les fonctionnalités qu'il vous fallait
@@ -163,7 +155,7 @@
 
     <section class="hero py-6 heropadding">   
       <div class="columns is-centered">
-        <div class="column is-11">
+        <div class="column is-10">
 
           <div class="tile is-ancestor">
 
