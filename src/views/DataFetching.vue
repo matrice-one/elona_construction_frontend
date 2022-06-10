@@ -30,6 +30,7 @@
 
         <div class="container">
         <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
+        
         </div>
 
          
@@ -45,20 +46,19 @@
                             :key="ma.id">
                             {{ ma.name}}
                             </th>
-
                         </tr>
+                        
                     </thead>
 
                   
-                    <tbody >
-                        <tr ref="resultat">
+                    <tbody ref="resultat">
+                        <tr>
                             <td v-for="ma in matable"
                             :key="ma.id"
                             v-html="ma.champ"
                             >
                             
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
@@ -69,6 +69,7 @@
 
 
            <input type="button" value="Copier" class="button is-dark my-1" ref="copy" v-on:click="selectElementContents">
+           <input type="button" value="TEST" class="button is-dark my-1" ref="test" v-on:click="testWrite">
 
 
         </div>
@@ -76,7 +77,7 @@
 
 
       <div class="container">
-      <button class="button is-warning p-4" @click="showConfig"> Configurer mes profils</button>
+      <button class="button is-warning p-4" @click="showConfig" ref="zozo"> Configurer mes profils</button>
       </div>
       <transition name="fade">
       
@@ -403,6 +404,71 @@ selectProfile(choix, profileIndex){
                     console.log(error)
                 })
       this.$store.commit('setIsLoading', false)
+      },
+
+      testWrite(){ 
+      let maselection= this.$store.getters.getSelection
+      let results = this.$store.getters.getResults
+
+      let toshow = maselection.map(t1 => ({...t1, ...results.find(t2 => t2.id === t1.id)}))
+
+      let table = toshow.map(a => a.champ);
+
+      let contentCo = table.join("      "); //"red,blue,green"
+
+      console.log("this is CONTENT COCO: ", contentCo)
+
+      //const blob = new Blob([contentCo], { type: "text/html" });
+
+      //const richTextInput = new window.ClipboardItem({ "text/html": blob });
+      //navigator.clipboard.write([richTextInput])
+      //navigator.clipboard.writeText([contentCo])  //work but html print as string
+
+      let textHtml = new Blob([contentCo], {type: 'text/html'});
+      console.log("this is BLOB : ", textHtml)
+
+      let text = '<table><tr><td><a href="https://www.my-url.com">My link</a></td><td>secondCell</td></tr><tr><td>firstCellSecondRow</td><td>secondCellSecondRow</td></tr></table>';
+
+    console.log("Wriing to clipbard");  
+    navigator.permissions.query({ name: 'clipboard-write' }).then(result => {
+        if (result.state === 'granted') {
+            var blob = new Blob([contentCo], {type: 'text/html'});
+            var item = new ClipboardItem({'text/html': blob});
+            navigator.clipboard.write([item]).then(function() {
+              console.log("Copied to clipboard successfully!");
+            }, function(error) {
+              console.error("unable to write to clipboard. Error:");
+              console.log(error);
+            });
+        } else {
+            console.log("clipboard-permission not granted: " + result);
+        }
+    })
+      /*
+
+        navigator.clipboard.writeText(JSON.stringify(table)) */
+
+      const content = this.$refs.resultat.innerHTML;
+      console.log("this is CONTENT: ", content)
+
+      //let contentCo = content.join(", "); //"red,blue,green"
+
+      //console.log("this is CONTENT COCO: ", contentCo)
+
+
+        //let data = new DataTransfer()
+
+      //data.items.add(content, "text/html")
+
+      //navigator.clipboard.write(data)
+
+      //const blob = new Blob([content], { type: "text/html" });
+
+      //const richTextInput = new window.ClipboardItem({ "text/html": blob });
+      //navigator.clipboard.write([richTextInput]);
+
+      //navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+
       },
 },
 
