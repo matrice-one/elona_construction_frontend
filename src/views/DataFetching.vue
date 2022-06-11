@@ -17,23 +17,20 @@
               <input type="text" class="input" v-model="adresse" name="address" autocomplete="on">
              
             </div>
-            </form> 
+          </form> 
         </div>
 
         <div class="notification is-danger mt-4" v-if="errors.length">
           <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
         </div>
+
         <div>
           <p> Exemple du format attendu: <i>"Rue des Délices 12a 1203 Genève"</i> </p>
-
         </div>
 
         <div class="container">
-        <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
-        
+          <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
         </div>
-
-         
 
       <div class="container" v-if="montre">
         <div class="column is-12 box my-3" >
@@ -47,12 +44,10 @@
                             {{ ma.name}}
                             </th>
                         </tr>
-                        
                     </thead>
-
                   
-                    <tbody ref="resultat">
-                        <tr>
+                    <tbody >
+                        <tr >
                             <td v-for="ma in matable"
                             :key="ma.id"
                             v-html="ma.champ"
@@ -62,15 +57,25 @@
                         </tr>
                     </tbody>
                 </table>
-                </div>
 
+                <table ref="resultat" class="visually-hidden">
+                  <tbody>
+                    <tr>
+                      <td v-for="ma in matable"
+                            :key="ma.id"
+                            v-html="ma.champ"
+                      >
 
-                </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+          </div>
+        </div>
 
 
            <input type="button" value="Copier" class="button is-dark my-1" ref="copy" v-on:click="selectElementContents">
-           <input type="button" value="TEST" class="button is-dark my-1" ref="test" v-on:click="testWrite">
-
 
         </div>
          <hr class="navbar-divider mt-6">
@@ -406,70 +411,7 @@ selectProfile(choix, profileIndex){
       this.$store.commit('setIsLoading', false)
       },
 
-      testWrite(){ 
-      let maselection= this.$store.getters.getSelection
-      let results = this.$store.getters.getResults
 
-      let toshow = maselection.map(t1 => ({...t1, ...results.find(t2 => t2.id === t1.id)}))
-
-      let table = toshow.map(a => a.champ);
-
-      let contentCo = table.join("      "); //"red,blue,green"
-
-      console.log("this is CONTENT COCO: ", contentCo)
-
-      //const blob = new Blob([contentCo], { type: "text/html" });
-
-      //const richTextInput = new window.ClipboardItem({ "text/html": blob });
-      //navigator.clipboard.write([richTextInput])
-      //navigator.clipboard.writeText([contentCo])  //work but html print as string
-
-      let textHtml = new Blob([contentCo], {type: 'text/html'});
-      console.log("this is BLOB : ", textHtml)
-
-      let text = '<table><tr><td><a href="https://www.my-url.com">My link</a></td><td>secondCell</td></tr><tr><td>firstCellSecondRow</td><td>secondCellSecondRow</td></tr></table>';
-
-    console.log("Wriing to clipbard");  
-    navigator.permissions.query({ name: 'clipboard-write' }).then(result => {
-        if (result.state === 'granted') {
-            var blob = new Blob([contentCo], {type: 'text/html'});
-            var item = new ClipboardItem({'text/html': blob});
-            navigator.clipboard.write([item]).then(function() {
-              console.log("Copied to clipboard successfully!");
-            }, function(error) {
-              console.error("unable to write to clipboard. Error:");
-              console.log(error);
-            });
-        } else {
-            console.log("clipboard-permission not granted: " + result);
-        }
-    })
-      /*
-
-        navigator.clipboard.writeText(JSON.stringify(table)) */
-
-      const content = this.$refs.resultat.innerHTML;
-      console.log("this is CONTENT: ", content)
-
-      //let contentCo = content.join(", "); //"red,blue,green"
-
-      //console.log("this is CONTENT COCO: ", contentCo)
-
-
-        //let data = new DataTransfer()
-
-      //data.items.add(content, "text/html")
-
-      //navigator.clipboard.write(data)
-
-      //const blob = new Blob([content], { type: "text/html" });
-
-      //const richTextInput = new window.ClipboardItem({ "text/html": blob });
-      //navigator.clipboard.write([richTextInput]);
-
-      //navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
-
-      },
 },
 
 }
@@ -491,5 +433,13 @@ selectProfile(choix, profileIndex){
     min-height: 60vh;
 }
 
+.visually-hidden {
+  position: absolute;
+  left:     -10000px;
+  top:      auto;
+  width:    1px;
+  height:   1px;
+  overflow: hidden;
+}
 
 </style>
