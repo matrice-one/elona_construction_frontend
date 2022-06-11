@@ -1,7 +1,10 @@
 <template>
+
   <div class="data-fetching">
     <div class="columns is-multiline">
       <div class="container p-5">
+          <div class="container p-5">
+      </div>
         <div class="column is-12">
         <p class="title is-size-2 is-primary pt-6">
           <img class="p-1" src="@/assets/images/data_fetcher_logo.png" width="60">

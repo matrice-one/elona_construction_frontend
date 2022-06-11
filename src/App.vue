@@ -39,8 +39,8 @@
     </div>
   </nav>
 
-  <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading': $store.state.isLoading }">
-  <div class="lds-dual-ring"></div>
+  <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading my-6': $store.state.isLoading }">
+  <div class="lds-dual-ring is-vcentered is-fullheight"></div>
 
 
 </div>
@@ -62,7 +62,7 @@
             <div class="tile is-parent is-vertical is-5">
               <div class="tile is-child">
                 <div class="image is-128x128">
-                  <img  src="@/assets/images/logo_elona_yellow.svg">
+                  <img  src="@/assets/images/logo_yello_no_text.png" style="max-width:5em">
                 </div>
                 <div class="container">
                   <p class="text has-text-white">
