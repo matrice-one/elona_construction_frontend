@@ -165,10 +165,6 @@ $navbar-item-color:#f89209;
 }
 
 
-
-
-
-
 .lds-dual-ring {
   margin: 35px;
   display: inline-block;
