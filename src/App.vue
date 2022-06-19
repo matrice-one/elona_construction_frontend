@@ -1,5 +1,11 @@
 <template>
 
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="@/assets/images/logo_elona_yellow.png"/>
+    <title>Elona Construction</title>
+</head>
+
 <div id="wrapper">
 
 <div class="has-navbar-fixed-top ">
