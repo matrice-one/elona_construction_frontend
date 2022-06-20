@@ -53,7 +53,7 @@ export default{
                     id:9,
                 },
                 {
-                    name: 'Numéro de bâtiment / parcelle ?',
+                    name: 'Numéro de bâtiment',
  
                     id:10,
                 },
@@ -109,85 +109,90 @@ export default{
                     id:20,
                 },
                 {
-                    name: "Inscription au patrimoine? (GE)",
+                    name: "Description de la zone (GE)",
 
                     id:21,
                 },
                 {
-                    name: "Type secteur géothermie (GE)",
+                    name: "Inscription au patrimoine? (GE)",
 
                     id:22,
                 },
                 {
-                    name: "Authorisation sondes géothermique (GE)",
+                    name: "Type secteur géothermie (GE)",
 
                     id:23,
                 },
                 {
-                    name: "Coordonnée E",
+                    name: "Authorisation sondes géothermique (GE)",
 
                     id:24,
                 },
                 {
-                    name: "Coordonnée N",
+                    name: "Coordonnée E",
 
                     id:25,
                 },
                 {
-                    name: "Lien image zone large (GE)",
+                    name: "Coordonnée N",
 
                     id:26,
                 },
                 {
-                    name: "Egrid",
+                    name: "Lien image zone large (GE)",
 
                     id:27,
                 },
                 {
-                    name: "Extrait rdppf pdf compact (GE)",
+                    name: "Egrid",
 
                     id:28,
                 },
                 {
-                    name: "Extrait rdppf pdf complet (GE)",
+                    name: "Extrait rdppf pdf compact (GE)",
 
                     id:29,
                 },
                 {
-                    name: "Extrait rdppf pdf formulaire (GE)",
+                    name: "Extrait rdppf pdf complet (GE)",
 
                     id:30,
                 },
                 {
-                    name: "Numéro parcelle (GE)",
+                    name: "Extrait rdppf pdf formulaire (GE)",
 
                     id:31,
+                },
+                {
+                    name: "Numéro parcelle (GE)",
+
+                    id:32,
                 },
                 
                 {
                     name: "Authorisations trouvées",
 
-                    id:32,
+                    id:33,
                 },
                 {
                     name: "Lien image geoadmin",
 
-                    id:33,
+                    id:34,
                 },
                 {
                     name: "Lien orthophoto 2020 bâtiment (GE)",
 
-                    id:34,
+                    id:35,
                 },
                 {
                     name: "Surface toit",
 
-                    id:35,
+                    id:36,
                 },
                 {
                     name: "Surface facades",
 
-                    id:36,
+                    id:37,
                 },
 
 
