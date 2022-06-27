@@ -2,7 +2,7 @@
     <div class="page-log-in">
         <div class="columns my-6">
             <div class="column is-4 is-offset-4 my-6">
-                <h1 class="title">Log in</h1>
+                <h1 class="title">Connection</h1>
 
                 <form @submit.prevent="submitForm">
 
@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="field">
-                        <label>Password</label>
+                        <label>Mot de passe</label>
                         <div class="control">
                             <input type="password" class="input" v-model="password">
                         </div>
@@ -26,13 +26,13 @@
 
                     <div class="field">
                         <div class="control">
-                            <button class="button is-dark">Log in</button>
+                            <button class="button is-dark">Se connecter</button>
                         </div>
                     </div>
 
                     <hr>
 
-                    Ou contacter nous à l'adresse email suivante <a href="mailto:marketing.team@energie-expert.ch">marketing.team@energie-expert.ch</a> pour créer un compte.
+                    Pour demander un accès à la plateforme, écrivez-nous à l'adresse <a href="mailto:marketing.team@energie-expert.ch">marketing.team@energie-expert.ch</a>.
                 </form>
             </div>
         </div>
