@@ -1,8 +1,8 @@
 <template>
     <div class="page-sign-up">
-        <div class="columns">
-            <div class="column is-4 is-offset-4">
-                <h1 class="title">Sign Up</h1>
+        <div class="columns my-6">
+            <div class="column is-4 is-offset-4 my-6">
+                <h1 class="title">Inscription</h1>
                 <form @submit.prevent="submitForm">
                     <div class="field">
                         <label>Email</label>
@@ -12,13 +12,13 @@
                     </div>
 
                     <div class="field">
-                        <label>Password</label>
+                        <label>Mot de passe</label>
                         <div class="control">
                             <input type="password" class="input" v-model="password">
                         </div>
                     </div>
                     <div class="field">
-                        <label>Repeat password</label>
+                        <label>Répetez le mot de passe</label>
                         <div class="control">
                             <input type="password" class="input" v-model="password2">
                         </div>
@@ -30,13 +30,13 @@
                      <div class="field">
 
                         <div class="control">
-                            <button class="button is-dark">Sign Up</button>
+                            <button class="button is-dark">S'inscrire</button>
                         </div>
                     </div>
 
                     <hr>
 
-                    Or <router-link to="/log-in">click here </router-link> to log in!
+                    Ou <router-link to="/log-in">cliquez ici </router-link> pour vous connecter!
 
 
                 </form>
