@@ -194,6 +194,21 @@ export default{
 
                     id:37,
                 },
+                {
+                    name: "Lien registre foncier avec proprietaire",
+
+                    id:38,
+                },
+                {
+                    name: "CECB réalisé?",
+
+                    id:39,
+                },
+                {
+                    name: "Zone bruit (GE)",
+
+                    id:40,
+                },
 
 
             ]
