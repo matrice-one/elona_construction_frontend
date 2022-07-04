@@ -322,5 +322,22 @@
 
 
 <style scoped>
+ul {
+  display: table;
+  margin: 0 auto;
+}
 
+ul {
+  /* // list-style-image: '@/assets/images/check.png'; */
+  list-style-type: '✅';
+  padding-inline-start: 2ch;
+  margin: 0 auto;
+  display: table;
+  
+}
+
+li {
+   padding-inline-start: 3ch;
+    margin: 15px auto;
+}
 </style>
