@@ -54,12 +54,13 @@
       </div>
     </div>
 
-    <section class="hero pb-5">
+    <section class="hero is-medium pb-5">
       <div class="columns is-centered">
-        <div class="column is-11">
+        <div class="column is-7">
       
           <div class="hero-body has-text-centered">
-            <p class="title is-4 has-text-primary has-text-centered">
+            <div class="content">
+            <p class="title is-3 has-text-primary has-text-centered">
               Gagnez une meilleur compréhension de la performance énergétique globale de votre ville. <br> Mettez en place les meilleurs plans d'action possibles.
             </p>
             <div class="containter px-6">
@@ -69,6 +70,7 @@
                 <br>
                 Tout cela de manière globale et intégrée.
                 </p> 
+            </div>
             </div>
           </div>
         </div>
@@ -262,14 +264,9 @@
                                 <div class="field">
                                     <label class="label"> Prénom <span class="has-text-danger has-text-weight-normal">*</span></label>
 
-                                    <p class="control is-expanded has-icons-left has-icons-right">
+                                    <p class="control is-expanded">
                                     <input class="input" type="name" placeholder="Elona" name="prenom">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                    <span class="icon is-small is-right">
-                                        <i class="fas fa-check"></i>
-                                    </span>
+
                                     </p>
                                 </div>
                                 </div>
@@ -278,8 +275,11 @@
                                     <div class="field">
                                     <label class="label">Email <span class="has-text-danger has-text-weight-normal">*</span></label>
     
-                                    <p class="control is-expanded">
+                                    <p class="control is-expanded has-icons-left">
                                         <input class="input" type="email" placeholder="elona@elona-construction.ch"  name="email">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
                                         <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                         </span>
