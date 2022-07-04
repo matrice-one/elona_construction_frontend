@@ -154,7 +154,7 @@ export default{
                     id:29,
                 },
                 {
-                    name: "Extrait rdppf pdf complet (GE)",
+                    name: "Extrait rdppf pdf complet",
 
                     id:30,
                 },
