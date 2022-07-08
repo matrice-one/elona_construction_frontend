@@ -101,7 +101,7 @@
                 <div class="content has-text-white">
                   <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br>
                     Téléphone: <br> 00 41 76 368 18 38 <br><br>
-                    Email: <br>marketing.team@energie-expert.ch <br><br>
+                    Email: <br>contact@elona-construction.ch<br><br>
                   </p>
                 </div>
               </div>

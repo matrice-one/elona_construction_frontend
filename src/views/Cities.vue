@@ -24,7 +24,7 @@
                     <div class="field has-addons">
 
                       <p class="control">
-                        <a class="button is-primary" href="mailto:marketing.team@energie-expert.ch">
+                        <a class="button is-primary" href="mailto:contact@elona-construction.ch">
                           Demandez plus d'information!
                         </a>
                       </p>
@@ -111,7 +111,7 @@
                     </ul>
 
                 <div class="container p-5">
-                <a class="button is-primary" href="mailto:marketing.team@energie-expert.ch">Lancez-vous!</a>
+                <a class="button is-primary" href="mailto:contact@elona-construction.ch">Lancez-vous!</a>
                 </div>
                 </div>
                 <div class="column is-half has-text-centered ">
@@ -156,7 +156,7 @@
                     </ul>
 
                 <div class="container p-5">
-                <a class="button is-primary" href="mailto:marketing.team@energie-expert.ch">Lancez-vous!</a>
+                <a class="button is-primary" href="mailto:contact@elona-construction.ch">Lancez-vous!</a>
                 </div>
                 </div>
             </div>

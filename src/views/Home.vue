@@ -22,7 +22,7 @@
                     <div class="field has-addons">
 
                       <p class="control">
-                        <a class="button is-link" href="mailto:marketing.team@energie-expert.ch">
+                        <a class="button is-link" href="mailto:contact@elona-construction.ch">
                           Lancez-vous!
                         </a>
                       </p>
@@ -144,7 +144,7 @@
           <p class="text-muted font-size-15 mb-4"> Création de profils réutilisables pour une selection personalisé en fonction de chacun de vos services. </p>
         
           <div class="container p-5">
-          <a class="button is-primary" href="mailto:marketing.team@energie-expert.ch">Lancez-vous!</a>
+          <a class="button is-primary" href="mailto:contact@elona-construction.ch">Lancez-vous!</a>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@
                     <p class="text-muted font-size-15 mb-4"> Pré-remplissage du devis grace à la combinaison des données renseignées et du Big Data. </p>
                   
                     <div class="container">
-                      <a class="button is-primary" href="mailto:marketing.team@energie-expert.ch" >Lancez-vous!</a>
+                      <a class="button is-primary" href="mailto:contact@elona-construction.ch" >Lancez-vous!</a>
                     </div>
 
                   </div>
