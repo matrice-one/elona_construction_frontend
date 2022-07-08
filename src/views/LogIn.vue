@@ -69,7 +69,7 @@ export default {
                     
                     axios.defaults.headers.common["Authorization"] = "Token " + token
                     localStorage.setItem("token", token)
-                    const toPath = this.$route.query.to || '/tableau-de-bord'
+                    const toPath = this.$route.query.to || '/data-fetching'
                     this.$router.push(toPath)
                 })
                 .catch(error => {
