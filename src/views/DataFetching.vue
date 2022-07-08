@@ -17,7 +17,7 @@
           <form @submit.prevent="submitForm" v-on:keyup.enter="submitForm" autocomplete="on">
             <div class="control" autocomplete="on">
               
-              <input type="text" class="input" v-model="adresse" name="address" autocomplete="on">
+              <input type="text" class="input" v-model="adresse" name="address" autocomplete="on" id="autocomplete" ref="autocomplete">
              
             </div>
           </form> 
@@ -201,6 +201,10 @@ export default {
   mounted(){
     document.title='Data Fetcher | Elona Construction'
     this.getChoixData()
+     let autocomplete = new google.maps.places.Autocomplete(this.$refs["autocomplete"])
+        autocomplete.setComponentRestrictions({
+    country: ["ch"],
+  })
   },
   computed: {
     ...mapState(['choix']),
