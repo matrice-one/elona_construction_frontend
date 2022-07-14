@@ -215,4 +215,16 @@ $navbar-item-color:#f89209;
 }
 
 }
+
+.contenu {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.navbar-default { margin : 0 !important; }
+
+html,body{
+    overflow-x: hidden;
+}
 </style>

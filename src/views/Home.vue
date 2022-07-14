@@ -64,7 +64,7 @@
       
       
           <div class="tile is-ancestor">
-            <div class="columns is-centered is-multiline ">
+            <div class="columns is-centered is-multiline p-5 ">
 
             <div class="tile is-parent is-3 ">
               <article class="tile is-child  ">
@@ -251,6 +251,12 @@ export default {
   padding: 2rem;
 }
 
+}
+
+.contenu {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 </style>

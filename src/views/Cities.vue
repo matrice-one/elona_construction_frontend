@@ -85,7 +85,7 @@
 
 
     <section class="hero is-halfheight has-background-warning-light py-5 my-5">
-      <div class="columns is-centered">
+      <div class="columns is-centered p-5">
         <div class="column is-10 my-6"> 
             <div class="tile is-ancestor columns is-vcentered">
                 <div class="tile is-vertical is-half ml-6">
@@ -135,7 +135,7 @@
                 <img src="@/assets/images/undraw_tourist_map.svg" alt class="p-6" />
                 </div>
             </div>
-                <div class="tile is-vertical is-half ml-6">
+                <div class="tile is-vertical is-half p-5">
                     <p class="title is-1">
                         Urbanisme et territoire
                     </p>
