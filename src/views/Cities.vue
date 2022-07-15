@@ -238,9 +238,16 @@
 
         <div class="columns is-centered">
         <div class="column is-6 p-4">
+            <div v-if="messageOK" class="container">
+                <div class="content pt-6">
+                    <p class="title has-text-black has-text-centered"> Nous avons bien reçu votre message!</p>
+                </div>
+            </div>
+
+            <div v-else>
             <div class="container p-6">
                 <div class="card p-5 has-background-primary-light">
-                                    <div class="hero-body has-text-centered">
+                <div class="hero-body has-text-centered">
                 <p class="title has-text-black">
                     Contactez-nous
                 </p>
@@ -255,7 +262,7 @@
                                     <label class="label">Nom <span class="has-text-danger has-text-weight-normal">*</span></label>
 
                                     <p class="control is-expanded">
-                                    <input class="input" type="name" placeholder="Favre" name="nom">
+                                    <input class="input" type="name" placeholder="Favre" name="nom" v-model="nom">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                     </span>
@@ -265,7 +272,7 @@
                                     <label class="label"> Prénom <span class="has-text-danger has-text-weight-normal">*</span></label>
 
                                     <p class="control is-expanded">
-                                    <input class="input" type="name" placeholder="Elona" name="prenom">
+                                    <input class="input" type="name" placeholder="Elona" name="prenom" v-model="prenom">
 
                                     </p>
                                 </div>
@@ -276,7 +283,7 @@
                                     <label class="label">Email <span class="has-text-danger has-text-weight-normal">*</span></label>
     
                                     <p class="control is-expanded has-icons-left">
-                                        <input class="input" type="email" placeholder="elona@elona-construction.ch"  name="email">
+                                        <input class="input" type="email" placeholder="elona@elona-construction.ch"  v-model="email" name="email">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-envelope"></i>
                                     </span>
@@ -285,13 +292,23 @@
                                         </span>
                                     </p>
                                     </div>
+                                    <div class="field">
+                                    <label class="label">Téléphone <span class="has-text-danger has-text-weight-normal">*</span></label>
+    
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="telephone" placeholder="(00)"  v-model="telephone" name="telephone">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-phone"></i>
+                                    </span>
+                                    </p>
+                                    </div>
 
                                 </div>
                             <div class="field-body">
                                 <div class="field">
                                     <label class="label">Décrivez en quelques mots vos besoins <span class="has-text-danger has-text-weight-normal">*</span></label>
                                     <div class="control">
-                                        <textarea class="textarea" placeholder="Voici ma requête: ..." maxlength="900" ></textarea>
+                                        <textarea class="textarea" placeholder="Voici ma requête: ..." v-model="besoins" maxlength="900" ></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -301,9 +318,9 @@
                     <div class="field-body">
                     <div class="field">
                         <div class="control pt-2">
-                        <!-- <button class="button is-primary" @click="submitMessage">
+                        <button class="button is-primary" @click="submitMessage">
                             Send message
-                        </button> -->
+                        </button>
                         </div>
                     </div>
                     </div>
@@ -311,6 +328,7 @@
                 </div>
                 </div>
 
+            </div>
             </div>
         </div>
 
@@ -341,3 +359,87 @@ li {
     margin: 15px auto;
 }
 </style>
+
+
+<script>
+import axios from 'axios'
+import { mapState } from 'vuex'
+
+export default {
+    name: 'FormulaireDevis',
+    components: {
+
+    },
+    data() {
+      return{
+        adresse:'',
+        nom:'',
+        prenom:'',
+        email:'',
+        message:'',
+        messageOK:false,
+        errorsForm:[],
+        errors:[],
+    }
+      
+    },
+    mounted() {
+    },
+    methods: {
+      submitMessage(){
+        this.errors = []
+            if (this.nom === '') {
+                this.errors.push('Veuillez remplir le champ "Nom"')
+            }
+            if (this.prenom === '') {
+                this.errors.push('Veuillez remplir le champ "Prénom"')
+            }
+            if (this.email === '') {
+                this.errors.push('Veuillez remplir le champ "Email"')
+            }
+            if (this.telephone === '') {
+                this.errors.push('Veuillez remplir le champ "telephone"')
+            }
+            if (this.besoins.length > 900) {
+                this.errors.push('Le champ "besoins" est trop long')
+            }
+
+            if (!this.errors.length){
+              this.sendData()
+            }
+
+      },
+      async sendData(){
+        this.$store.commit('setIsLoading', true)
+
+        const data = {
+          'nom':this.nom,
+          'prenom':this.prenom,
+          'email':this.email,
+          'telephone':this.telephone,
+          'besoins':this.besoins,
+            }
+        console.log('this is the data to be send: ',data)
+
+        await axios
+        .post('/api/v1/formulaireContact/', data)
+        .then(response => {
+
+        console.log("RESPONSE SERVER: ",response.data)
+        this.messageOK = true
+
+      })
+      .catch(error => {
+          this.errorsForm.push('Un problème est survenu. Veuillez réessayer')
+          console.log(error)
+      })
+      this.$store.commit('setIsLoading', false)
+      },
+
+        
+
+    },
+
+}
+</script>
+
