@@ -66,10 +66,12 @@ export default {
                 .then(response => {
                     const token = response.data.auth_token
                     this.$store.commit('setToken', token)
+                    this.$store.commit('setUsername', this.username)
                     
                     axios.defaults.headers.common["Authorization"] = "Token " + token
                     localStorage.setItem("token", token)
-                    const toPath = this.$route.query.to || '/tableau-de-bord'
+                    localStorage.setItem("username", this.username)
+                    const toPath = this.$route.query.to || '/data-fetching'
                     this.$router.push(toPath)
                 })
                 .catch(error => {

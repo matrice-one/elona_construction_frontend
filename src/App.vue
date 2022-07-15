@@ -27,8 +27,8 @@
 
       </div>
       <div class="navbar-end navbarpadding ">
-        <router-link to="/prospecting" class="navbar-item">Prospecting</router-link>
-        <router-link to="/data-fetching" class="navbar-item">Data Fetcher</router-link>
+        <router-link to="/cities" class="navbar-item">Villes</router-link>
+        <router-link to="/data-fetching" class="navbar-item">Entreprises</router-link>
         <div class="navbar-item">
           <div class="buttons">
             <template v-if="$store.state.isAuthenticated">
@@ -101,7 +101,7 @@
                 <div class="content has-text-white">
                   <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br>
                     Téléphone: <br> 00 41 76 368 18 38 <br><br>
-                    Email: <br>marketing.team@energie-expert.ch <br><br>
+                    Email: <br>contact@elona-construction.ch<br><br>
                   </p>
                 </div>
               </div>
@@ -164,6 +164,7 @@ $navbar-item-color:#f89209;
   flex-direction: column;
 }
 
+
 #app {
   flex: 1;
   display: flex;
@@ -213,5 +214,17 @@ $navbar-item-color:#f89209;
   padding-left: 3rem;
 }
 
+}
+
+.contenu {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.navbar-default { margin : 0 !important; }
+
+html,body{
+    overflow-x: hidden;
 }
 </style>
