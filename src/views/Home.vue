@@ -253,10 +253,5 @@ export default {
 
 }
 
-.contenu {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
 
 </style>
