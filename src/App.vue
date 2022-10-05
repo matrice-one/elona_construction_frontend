@@ -148,11 +148,13 @@ export default {
 
 
 <style lang="scss">
-$primary: #1d492b;
-$link: #f89209;
-$footer-background-color : #1d492b;
+$primary: #53fab9;
+$link: #232128;
+$footer-background-color : #232128;
 $navbar-padding-horizontal:size-2;
-$navbar-item-color:#f89209;
+$navbar-item-color:#232128;
+$light:#BDFFE5;
+$dark: #232128;
 
 
 

@@ -1,7 +1,7 @@
 
 <template>
   <div class="home">
-    <div class="hero is-primary is-fullheight pt-6 ">
+    <div class="hero is-light is-fullheight pt-6 ">
       <div class="tile">
         <div class="columns is-centered is-vcentered ">
           <div class="column is-10 is-vcentered">
@@ -64,35 +64,51 @@
       
       
           <div class="tile is-ancestor">
-            <div class="columns is-centered is-multiline p-5 ">
+            <div class="columns is-centered is-multiline ">
 
             <div class="tile is-parent is-3 ">
               <article class="tile is-child  ">
-                  <p class="title is-4 nobreak">Moins de temps perdu</p>
+                  <div class="column has-text-centered p-3">
+                    <span class="icon has-text-dark">
+                    <font-awesome-icon icon="fa-solid fa-globe" size="6x" fade style="--fa-animation-duration: 15s;"/>
+                    </span>
+                </div>
+                  <p class="title is-4 nobreak">Une vision globale et complète</p>
                   <div class="content">
                   <p>
-                    Entrez votre adresse et notre algorithme collecte toutes les données nécessaires (Geoadmin, SAD, SITG, ....) automatiquement.
+                    Chaque projet de transition énergétique est complexe et requiert une vision d'ensemble. Le Datafetcher collecte toutes les données dont vous avez besoin.
                   </p>
                 </div>
               </article>
             </div>
             <div class="tile is-parent is-3">
               <article class="tile is-child ">
-                <p class="title is-4 nobreak">Plus de visibilité</p>
+                <div class="column has-text-centered p-3 height:3em">
+                  <span class="icon has-text-dark">
+                    <font-awesome-icon icon="fa-solid fa-gauge-high" size="6x" fade style="--fa-animation-duration: 15s;"/>
+                  </span>                
+                  </div>
+                <p class="title is-4 nobreak">Un service au top de la réactivité</p>
                 <div class="content">
                   <p>
-                    Recevez un devis de la part des propriétaires qui visitent notre plateforme SimulateurRenov et faites automatiquement un appel d'offre pré-rempli. 
+                    Avant chaque mission vient le contact client. Suprenez et rassurez vos prospect en démontrant votre réactivité face à son cas spécifique.
                   </p>
                 </div>
               </article>
             </div>
             
+
             <div class="tile is-parent is-3">
               <article class="tile is-child ">
-                <p class="title is-4 nobreak">Plus de possibilités</p>
+                <div class="column has-text-centered p-3 height:3em">
+                  <span class="icon has-text-dark">
+                    <font-awesome-icon icon="fa-solid fa-piggy-bank" size="6x" fade style="--fa-animation-duration: 15s;"/>
+                  </span>                
+                  </div>
+                <p class="title is-4 nobreak">Des économies de temps et d'argent</p>
                 <div class="content">
                   <p>
-                    Nous avons les compétences mais vous avez la connaissance du terrain et de ses difficultés. Faites nous part de votre vision et nous ferons de notre mieux pour l'excecuter. 
+                    En automatisant le processus de collecte de données, nous vous aidons à occuper chaque heure facturée à votre spécialité en réduisant le temps de préparation.
                   </p>
                 </div>
               </article>
@@ -160,7 +176,7 @@
           <div class="tile is-ancestor">
 
             <div class="columns is-centered is-multiline">
-
+<!-- 
               <div class="tile is-parent is-6">
                 <div class="tile is-child">
                   <div class="content">
@@ -177,11 +193,9 @@
                         En aidant les propriétaires à se renseigner sur leur projet de rénovation, nous recevons des demandes de devis de la part des propriétaires qui désirent aller plus loin. Soyez celui qui recoit le devis.
                       </p>
                     <i class="fa fa-box"></i>
-                    <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
                     <p class="text-muted font-size-15 mb-4"> Reception de demande de devis par email</p>
 
                     <i class="fa fa-clock"></i>
-                    <!-- <font-awesome-icon icon="fa-regular fa-box-check" /> -->
                     <p class="text-muted font-size-15 mb-4"> Pré-remplissage du devis grace à la combinaison des données renseignées et du Big Data. </p>
                   
                     <div class="container">
@@ -190,7 +204,7 @@
 
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <div class="tile is-parent is-2 ">
                 <div class="tile is-child">
