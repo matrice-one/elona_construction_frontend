@@ -11,11 +11,11 @@
                   <div class="tile is-child pt-6">
 
                     <div class="content heropadding">
-                    <p class="title is-1">
+                    <p class="title is-1 has-text-weight-bold">
                         Nous developpons des outils pour les professionels de la rénovation énergétique Genevois.
                     </p>
 
-                      <p class="text is-size-4 mb-4">
+                      <p class="text is-size-4 mb-4 has-text-weight-light">
                         Le challenge est grand, nous vous aidons à vous concentrer sur l'essentiel.
                       </p>
 
@@ -49,21 +49,21 @@
     </div>
 
     <section class="hero pb-5">
-      <div class="columns is-centered">
+      <div class="columns is-centered mb-6">
         <div class="column is-11">
       
-          <div class="hero-body has-text-centered">
+          <div class="hero-body has-text-centered mb-6">
             <p class="title is-2 has-text-primary has-text-centered">
               Pourquoi utiliser les outils E-cco?
             </p>
-            <p class="text-muted mb-4">
+            <p class="text-muted">
               Le secteur de la rénovation à Genève est nouveau et il manque d'outil spécifiques pour mener à bien sa mission. <br>
               E-cco est la première startup Genevoise à mettre ses compétences digitales à leur service.
             </p> 
           </div>
       
       
-          <div class="tile is-ancestor">
+          <div class="tile is-ancestor ">
             <div class="columns is-centered is-multiline ">
 
             <div class="tile is-parent is-3 ">
@@ -75,7 +75,7 @@
                 </div>
                   <p class="title is-4 nobreak">Une vision globale et complète</p>
                   <div class="content">
-                  <p>
+                  <p class='has-text-weight-light'>
                     Chaque projet de transition énergétique est complexe et requiert une vision d'ensemble. Le Datafetcher collecte toutes les données dont vous avez besoin.
                   </p>
                 </div>
@@ -90,9 +90,9 @@
                   </div>
                 <p class="title is-4 nobreak">Un service au top de la réactivité</p>
                 <div class="content">
-                  <p>
+                  <p class='has-text-weight-light'>
                     Avant chaque mission vient le contact client. Suprenez et rassurez vos prospect en démontrant votre réactivité face à son cas spécifique.
-                  </p>
+                  </p >
                 </div>
               </article>
             </div>
@@ -107,7 +107,7 @@
                   </div>
                 <p class="title is-4 nobreak">Des économies de temps et d'argent</p>
                 <div class="content">
-                  <p>
+                  <p class='has-text-weight-light'>
                     En automatisant le processus de collecte de données, nous vous aidons à occuper chaque heure facturée à votre spécialité en réduisant le temps de préparation.
                   </p>
                 </div>
@@ -124,15 +124,75 @@
 
 
 
-
     <section class="hero is-halfheight is-light py-5 my-5">
       <div class="columns is-centered">
       <div class="column is-10 "> 
         <div class="container mb-6">
-      <p class="title is-2 has-text-primary has-text-centered p-6">
-        Toutes les fonctionnalités qu'il vous fallait
-      </p>
+            <p class="title is-2 has-text-dark has-text-centered p-6 has-text-weight-bold">
+              Une fonctionnalité pour chacun de vos besoins
+              <!-- - Créez un ensemble de données par service
+              - Organisez, supprimez et ajoutez des données pour chaque ensemble
+              - Sauvegardez vos ensembles de données
+              - Lancez les simulations pour mieux apréhender vos clients -->
+            </p>
         </div>
+        <div class="columns">
+        <!-- <div class="column">
+          <div class="card">
+            <div class="column has-text-centered ">
+                <span class="icon has-text-dark mt-6">
+                  <font-awesome-icon icon="fa-solid fa-boxes-packing" size="3x" fade style="--fa-animation-duration: 15s;"/>
+                </span>
+            </div>
+            <div class="card-content">
+              <div class="content ">
+                <p class="is-size-5	has-text-dark has-text-centered">
+                  Créez autant de pack de données que vous avez de service.
+                </p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="column has-text-centered ">
+                <span class="icon has-text-dark mt-6">
+                  <font-awesome-icon icon="fa-solid fa-globe" size="3x" fade style="--fa-animation-duration: 15s;"/>
+                </span>
+            </div>
+            <div class="card-content">
+              <div class="content ">
+                <p class="is-size-5	has-text-dark has-text-centered">
+                  Ajoutez et supprimez les données selon vos besoins.
+                </p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <div class="column has-text-centered ">
+                <span class="icon has-text-dark mt-6">
+                  <font-awesome-icon icon="fa-solid fa-globe" size="3x" fade style="--fa-animation-duration: 15s;"/>
+                </span>
+            </div>
+            <div class="card-content">
+              <div class="content ">
+                <p class="is-size-5	has-text-dark has-text-centered">
+                  Lancez des simulations pour chaque bâtiment.
+                </p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+
+</div>
       <div class="tile is-ancestor columns is-vcentered">
         
         <div class="column is-half has-text-centered">
@@ -169,43 +229,81 @@
     </section>
 
 
-    <section class="hero py-6 heropadding">   
+
+    <section class="hero is-halfheight py-5 my-5">
+      <div class="columns is-centered">
+        <div class="column is-10 "> 
+            <div class="column">
+              <div class="card">
+                <div class="column has-text-centered ">
+                    <span class="icon has-text-dark mt-6">
+                      <font-awesome-icon icon="fa-solid fa-globe" size="3x" fade style="--fa-animation-duration: 15s;"/>
+                    </span>
+                </div>
+                <div class="card-content">
+                  <div class="content ">
+                    <p class="is-size-5	has-text-dark has-text-centered">
+                      Données Physiques
+                    </p>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="column">
+              <div class="card">
+                <div class="column has-text-centered ">
+                    <span class="icon has-text-dark mt-6">
+                      <font-awesome-icon icon="fa-solid fa-globe" size="3x" fade style="--fa-animation-duration: 15s;"/>
+                    </span>
+                </div>
+                <div class="card-content">
+                  <div class="content ">
+                    <p class="is-size-5	has-text-dark has-text-centered">
+                      Données administratives
+                    </p>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            
+        </div>
+      </div>
+    </section>
+
+    <section class="hero pb-5 is-light">
+      <div class="columns is-centered mb-6">
+        <div class="column is-11">
+          <div class="tile is-ancestor columns is-vcentered">
+                <div class="tile is-vertical is-half ml-6">
+                   <p class="title is-4 nobreak">Faites notre connaissance</p>
+                    <p class='has-text-weight-light'>
+                      Une analyste de données, un ingénieur en efficience énergétique, un developpeur web, et une envie de faire bouger les choses en soutenant ceux qui sont aux premières lignes.
+                    </p>
+                    <div class="container my-6 is-align-items-flex-start">
+                      <a class="button is-primary" href="mailto:contact@elona-construction.ch">Contactez Neigeline pour une présentation</a>
+                    </div>
+                </div>
+          <div class="column is-half has-text-centered p-3">
+              <img src="@/assets/image_team.png" alt class="" />
+          </div>
+      </div>
+    
+        </div>
+      </div>
+    </section>
+  
+ 
+
+
+    <section class="hero py-6 heropadding is-light">   
       <div class="columns is-centered">
         <div class="column is-10">
 
           <div class="tile is-ancestor">
 
             <div class="columns is-centered is-multiline">
-<!-- 
-              <div class="tile is-parent is-6">
-                <div class="tile is-child">
-                  <div class="content">
-                    <p class="title is-6">
-                      RENOV SIMULATEUR
-                    </p>
-                    <p class="title is-4">
-                          Enfin une 
-                        <b>vitrine</b> 
-                        ou vous payez pour être vus <br>
-                        <b>par ceux qui désirent vous voir.</b>
-                    </p>
-                    <p class="text-muted font-size-15 mb-4">
-                        En aidant les propriétaires à se renseigner sur leur projet de rénovation, nous recevons des demandes de devis de la part des propriétaires qui désirent aller plus loin. Soyez celui qui recoit le devis.
-                      </p>
-                    <i class="fa fa-box"></i>
-                    <p class="text-muted font-size-15 mb-4"> Reception de demande de devis par email</p>
-
-                    <i class="fa fa-clock"></i>
-                    <p class="text-muted font-size-15 mb-4"> Pré-remplissage du devis grace à la combinaison des données renseignées et du Big Data. </p>
-                  
-                    <div class="container">
-                      <a class="button is-primary" href="mailto:contact@elona-construction.ch" >Lancez-vous!</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div> -->
-
               <div class="tile is-parent is-2 ">
                 <div class="tile is-child">
                   <div class="content">

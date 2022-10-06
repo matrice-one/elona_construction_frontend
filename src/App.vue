@@ -28,7 +28,7 @@
       </div>
       <div class="navbar-end navbarpadding ">
         <router-link to="/cities" class="navbar-item">Villes</router-link>
-        <router-link to="/data-fetching" class="navbar-item">Entreprises</router-link>
+        <router-link to="/data-fetching" class="navbar-item">Outil Entreprises</router-link>
         <div class="navbar-item">
           <div class="buttons">
             <template v-if="$store.state.isAuthenticated">
@@ -148,6 +148,16 @@ export default {
 
 
 <style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet');
+
+
+$family-serif: "Libre Franklin", sans-serif;
+$family-primary: $family-serif;
+
+
 $primary: #53fab9;
 $link: #232128;
 $footer-background-color : #232128;
