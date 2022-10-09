@@ -26,7 +26,7 @@
       <div class="navbar-start">  
 
       </div>
-      <div class="navbar-end navbarpadding ">
+      <div class="navbar-end navbarpadding">
         <router-link to="/data-fetching" class="navbar-item">Outil Entreprises</router-link>
         <router-link to="/cities" class="navbar-item">Services Villes</router-link>
         <div class="navbar-item">
