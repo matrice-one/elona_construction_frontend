@@ -13,7 +13,7 @@
     <div class="navbar-brand navbarpadding ">
 
       <a class="navbar-item " href="/">
-        <img class=" mt-2 " src="@/assets/images/logo_elona_yellow.png" style="min-height:3.75rem">
+        <img class=" mt-2 " src="@/assets/renovation.png" style="min-height:3.75rem">
       </a>
 
       <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
@@ -27,8 +27,8 @@
 
       </div>
       <div class="navbar-end navbarpadding ">
-        <router-link to="/cities" class="navbar-item">Villes</router-link>
-        <router-link to="/data-fetching" class="navbar-item">Entreprises</router-link>
+        <router-link to="/data-fetching" class="navbar-item">Outil Entreprises</router-link>
+        <router-link to="/cities" class="navbar-item">Services Villes</router-link>
         <div class="navbar-item">
           <div class="buttons">
             <template v-if="$store.state.isAuthenticated">
@@ -58,63 +58,36 @@
 
 </div>
 
-  <footer class="footer">
-    <div class="columns is-centered">
-      <div class="column is-11">
-
-        <div class="tile is-ancestor">
-          <div class="columns is-centered is-multiline">
-
-            <div class="tile is-parent is-vertical is-5">
-              <div class="tile is-child">
-                <div class="image is-128x128">
-                  <img  src="@/assets/images/logo_yello_no_text.png" style="max-width:5em">
+     <footer class="footer has-background-dark has-text-primary-light">
+      <div class="content">
+        <div class="columns">
+          <div class="column p-3">
+                <div class="image is-128x128 p-3">
+                  <img  src="@/assets/renovation_green.png" style="max-width:5em">
                 </div>
-                <div class="container">
-                  <p class="text has-text-white">
-                    E-cco est une startup genevoise créée en 2022. Elle participe à la transition énergétique en faisant bénéficier ses acteurs des avancées numériques.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="tile is-parent is-3">
-              <div class="tile is-child">
-                <div class="content has-text-white">
-                  <p class="title has-text-white is-5">  <br><br>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tile is-parent is-1">
-              <div class="tile is-child">
-                <div class="content has-text-white">
-                  <p class="title has-text-white is-5">  <br><br>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="tile is-parent is-3">
-              <div class="tile is-child">
-                <div class="content has-text-white">
-                  <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br>
-                    Téléphone: <br> 00 41 76 368 18 38 <br><br>
-                    Email: <br>contact@elona-construction.ch<br><br>
-                  </p>
-                </div>
-              </div>
-            </div>
-
           </div>
+          <div class="column">
+            <h2 class="subtitle is-4 has-text-primary">A propos de nous</h2>
 
+            <!-- <p> Notre mission </p> -->
+            <p class="mr-6"> E-cco est une startup Genevoise fondée en 2022 par trois amis souscieux d'avoir un impact positif en contribuant à la transition énergétique par la voie du digital.</p>
+          </div>
+          <div class="column">
+            <h2 class="subtitle is-4 has-text-primary">Legal</h2>
+
+            <p> GDPR </p>
+            <p> Mentions légales </p>
+            <p>  </p>
+          </div>
+          <div class="column">
+            <h2 class="subtitle is-4 has-text-primary">Nous contacter</h2>
+
+            <p> 00 41 76 368 18 38 </p>
+            <p> Mentions légales </p>
+          </div>
         </div>
-
-
-    </div>
-   </div> 
-  </footer>
+      </div>
+    </footer>
 
 </template>
 
@@ -148,11 +121,23 @@ export default {
 
 
 <style lang="scss">
-$primary: #1d492b;
-$link: #f89209;
-$footer-background-color : #1d492b;
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet');
+
+
+$family-serif: "Libre Franklin", sans-serif;
+$family-primary: $family-serif;
+
+
+$primary: #53fab9;
+$link: #232128;
+$footer-background-color : #232128;
 $navbar-padding-horizontal:size-2;
-$navbar-item-color:#f89209;
+$navbar-item-color:#232128;
+$light:#BDFFE5;
+$dark: #232128;
 
 
 
