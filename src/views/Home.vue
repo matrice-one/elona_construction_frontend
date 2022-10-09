@@ -297,37 +297,6 @@
  
 
 
-    <section class="hero py-6 heropadding is-light">   
-      <div class="columns is-centered">
-        <div class="column is-10">
-
-          <div class="tile is-ancestor">
-
-            <div class="columns is-centered is-multiline">
-              <div class="tile is-parent is-2 ">
-                <div class="tile is-child">
-                  <div class="content">
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              
-
-              <div class="tile is-parent is-4 ">
-                <div class="tile is-child">
-                  <div class="image is-3by2">
-                    <img src="@/assets/images/screenshot_calculateur_class.png" />
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
 
 
 
