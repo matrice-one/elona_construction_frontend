@@ -8,7 +8,7 @@
         <div class="column is-12">
         <p class="title is-size-2 is-primary pt-6">
           <img class="p-1" src="@/assets/images/data_fetcher_logo.png" width="60">
-          Data Fetcher
+          Data Collector
         </p>
         
 
