@@ -63,11 +63,11 @@
           </div>
       
       
-          <div class="tile is-ancestor ">
+          <div class="tile is-ancestor px-5">
             <div class="columns is-centered is-multiline ">
 
             <div class="tile is-parent is-3 ">
-              <article class="tile is-child  ">
+              <article class="tile is-child ">
                   <div class="column has-text-centered p-3">
                     <span class="icon has-text-dark">
                     <font-awesome-icon icon="fa-solid fa-globe" size="6x" fade style="--fa-animation-duration: 15s;"/>
@@ -272,9 +272,9 @@
       </div>
     </section>
 
-    <section class="hero pb-5 is-light">
-      <div class="columns is-centered mb-6">
-        <div class="column is-11">
+    <section class="hero is-halfheight py-5 my- has-background-light">
+      <div class="columns is-centered">
+        <div class="column is-10"> 
           <div class="tile is-ancestor columns is-vcentered">
                 <div class="tile is-vertical is-half ml-6">
                    <p class="title is-4 nobreak">Faites notre connaissance</p>
