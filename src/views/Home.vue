@@ -1,19 +1,6 @@
 
 <template>
   <div class="home">
-    <div class="hero is-light is-fullheight pt-6 ">
-      <div class="tile">
-        <div class="columns is-centered is-vcentered ">
-          <div class="column is-10 is-vcentered">
-              <div class="tile is-ancestor pt-6 ">
-                <div class="columns is-centered is-multiline ">
-                <div class="tile is-parent is-vertical is-6">
-                  <div class="tile is-child pt-6">
-
-                    <div class="content heropadding">
-                    <p class="title is-1 has-text-weight-bold">
-                        Nous developpons des outils pour les professionels de la rénovation énergétique Genevois.
-                    </p>
 
                       <p class="text is-size-4 mb-4 has-text-weight-light">
                         Le challenge est grand, nous vous aidons à vous concentrer sur l'essentiel.
@@ -49,8 +36,7 @@
     </div>
 
     <section class="hero pb-5">
-      <div class="columns is-centered mb-6">
-        <div class="column is-11">
+
       
           <div class="hero-body has-text-centered mb-6">
             <p class="title is-2 has-text-primary has-text-centered">
@@ -227,8 +213,6 @@
       </div>
       </div>
     </section>
-
-
 
     <section class="hero is-halfheight py-5 my-5">
       <div class="columns is-centered">
