@@ -5,7 +5,7 @@ changelog:
     labels:
       - ignore-for-release
     authors:
-
+      - none
   categories:
     - title: Exciting New Features 🎉
       labels:
