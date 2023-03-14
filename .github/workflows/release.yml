@@ -1,39 +1,20 @@
-name: Release
-on:
-  pull_request:
-    types: [closed]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.event.pull_request.head.ref }}
-          release_name: Release ${{ github.event.pull_request.head.ref }}
-          body: |
-            # Release Notes
-            
-            Add your custom release notes here.
-            
-            ## Pull Requests
-            
-          draft: false
-          prerelease: false
-          
-      - name: Get Pull Request Data
-        id: pr_data
-        run: |
-          PR_NUMBER=$(echo "${{ github.event.pull_request.url }}" | cut -d'/' -f7)
-          PULL_REQUESTS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}/commits | \
-            jq '.[].commit.message')
-          echo "::set-output name=pullRequestData::$(echo $PULL_REQUESTS | sed 's/\\"/"/g')"
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# .github/release.yml
+
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - octocat
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - Semver-Major
+        - breaking-change
+    - title: Exciting New Features 🎉
+      labels:
+        - Semver-Minor
+        - enhancement
+    - title: Other Changes
+      labels:
+        - "*"
