@@ -22,3 +22,5 @@ changelog:
     - title: Other Changes
       labels:
         - "*"
+        
+  change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
