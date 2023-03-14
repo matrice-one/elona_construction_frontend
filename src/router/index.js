@@ -7,6 +7,7 @@ import LogIn from '../views/LogIn.vue'
 import Prospecting from '../views/Prospecting.vue'
 import DataFetching from '../views/DataFetching.vue'
 import TableauDeBord from '../views/TableauDeBord.vue'
+import Cities from '../views/Cities.vue'
 
 
 
@@ -36,6 +37,15 @@ const routes = [
     component: SignUp
   },
   {
+    path: '/cities',
+    name: 'Cities',
+    component: Cities,
+    meta: {
+      requireLogin: false
+    }
+  },
+
+  {
     path: '/prospecting',
     name: 'Prospecting',
     component: Prospecting,
@@ -58,8 +68,7 @@ const routes = [
     meta: {
       requireLogin: true
     }
-  },
-
+  }
 ]
 
 const router = createRouter({

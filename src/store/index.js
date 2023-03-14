@@ -12,9 +12,9 @@ export default createStore({
     token: '',
     results: '',
     isLoading:false,
+    username:'',
     choix,
     reference,
-    
   
   },
   getters: {
@@ -24,6 +24,9 @@ export default createStore({
     },
     getResults(state){
       return state.results
+    },
+    getUsername(state){
+      return state.username
     },
     getProfiles(state){
       return state.choix.profiles
@@ -118,13 +121,16 @@ export default createStore({
     initializeStore(state){
       if (localStorage.getItem('token')) {
         state.token = localStorage.getItem('token')
+        state.username = localStorage.getItem('username')
         state.isAuthenticated = true
     } else {
         state.token = ''
         state.isAuthenticated = false
     }
     },
-
+    setUsername(state, username){
+      state.username = username    
+    },
 
     setToken(state, token) {
       state.token = token

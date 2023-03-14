@@ -1,11 +1,14 @@
 <template>
+
   <div class="data-fetching">
     <div class="columns is-multiline">
       <div class="container p-5">
+          <div class="container p-5">
+      </div>
         <div class="column is-12">
         <p class="title is-size-2 is-primary pt-6">
           <img class="p-1" src="@/assets/images/data_fetcher_logo.png" width="60">
-          Data Fetcher
+          Data Collector
         </p>
         
 
@@ -14,25 +17,23 @@
           <form @submit.prevent="submitForm" v-on:keyup.enter="submitForm" autocomplete="on">
             <div class="control" autocomplete="on">
               
-              <input type="text" class="input" v-model="adresse" name="address" autocomplete="on">
+              <input type="text" class="input" v-model="adresse" name="address" autocomplete="on" id="autocomplete">
              
             </div>
-            </form> 
+          </form> 
         </div>
 
         <div class="notification is-danger mt-4" v-if="errors.length">
           <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
         </div>
+
         <div>
           <p> Exemple du format attendu: <i>"Rue des Délices 12a 1203 Genève"</i> </p>
-
         </div>
 
         <div class="container">
-        <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
+          <button class="button is-dark my-2" @click="submitForm">Afficher mes données</button>
         </div>
-
-         
 
       <div class="container" v-if="montre">
         <div class="column is-12 box my-3" >
@@ -45,38 +46,46 @@
                             :key="ma.id">
                             {{ ma.name}}
                             </th>
-
                         </tr>
                     </thead>
-
-
-                    <tbody ref="resultat">
-                        <tr>
+                  
+                    <tbody >
+                        <tr >
                             <td v-for="ma in matable"
                             :key="ma.id"
                             v-html="ma.champ"
                             >
                             
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
-                </div>
 
+                <table ref="resultat" class="visually-hidden">
+                  <tbody>
+                    <tr>
+                      <td v-for="ma in matable"
+                            :key="ma.id"
+                            v-html="ma.champ"
+                      >
 
-                </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+          </div>
+        </div>
 
 
            <input type="button" value="Copier" class="button is-dark my-1" ref="copy" v-on:click="selectElementContents">
-
 
         </div>
          <hr class="navbar-divider mt-6">
 
 
       <div class="container">
-      <button class="button is-warning p-4" @click="showConfig"> Configurer mes sélections</button>
+      <button class="button is-warning p-4" @click="showConfig" ref="zozo"> Configurer mes profils</button>
       </div>
       <transition name="fade">
       
@@ -86,7 +95,7 @@
 
             <div class="column is-one-third" >
                 <div class="content">
-                  <h1 class="title is-4 has-text-black">Mes selections:</h1>
+                  <h1 class="title is-4 has-text-black">Mes profils:</h1>
                 </div>
                 <ul>
                   <li
@@ -106,7 +115,7 @@
                         type="text"
                         class="input is-warning"
                         
-                        placeholder="Nouveau Profil"
+                        placeholder="Nouveau profil"
                         v-model="newProfileName"
                         @keyup.enter="createProfile"
                         >
@@ -118,7 +127,7 @@
             
             <div class="column is-two-third">
                 <div class="content">
-                  <h1 class="title is-4 has-text-black">Modifier la sélection :</h1>
+                  <h1 class="title is-4 has-text-black">Modifier le profil :</h1>
                 </div>
             
               <div class="columns ">
@@ -190,8 +199,9 @@ export default {
     }
   },
   mounted(){
-    document.title='Data Fetching | Elona Construction'
+    document.title='Data Fetcher | Elona Construction'
     this.getChoixData()
+     
   },
   computed: {
     ...mapState(['choix']),
@@ -267,7 +277,7 @@ export default {
                 .post('/api/v1/datafetching/', data)
                 .then(response => {
 
-                  //console.log(response.data)
+                  console.log("RESPONSE SERVER: ",response.data)
                   
                   this.montre = true
                   this.$store.commit('setResults', response.data)
@@ -404,6 +414,8 @@ selectProfile(choix, profileIndex){
                 })
       this.$store.commit('setIsLoading', false)
       },
+
+
 },
 
 }
@@ -425,5 +437,13 @@ selectProfile(choix, profileIndex){
     min-height: 60vh;
 }
 
+.visually-hidden {
+  position: absolute;
+  left:     -10000px;
+  top:      auto;
+  width:    1px;
+  height:   1px;
+  overflow: hidden;
+}
 
 </style>

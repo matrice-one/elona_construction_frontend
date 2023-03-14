@@ -1,76 +1,19 @@
 <template>
 
-  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <img src="@/assets/images/Logo2_ecco.png" width="112" height="28">
-      </a>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="@/assets/images/logo_elona_yellow.png"/>
+    <title>Elona Construction</title>
+</head>
 
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-
-        <a class="navbar-item">
-          Documentation
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav> -->
 <div id="wrapper">
-
-
-
 
 <div class="has-navbar-fixed-top ">
   <nav class="navbar is-primary is-fixed-top">
     <div class="navbar-brand navbarpadding ">
 
       <a class="navbar-item " href="/">
-        <img class=" mt-2 " src="@/assets/images/Logo2_ecco.png" width="112" height="28">
+        <img class=" mt-2 " src="@/assets/renovation.png" style="min-height:3.75rem">
       </a>
 
       <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
@@ -84,8 +27,8 @@
 
       </div>
       <div class="navbar-end navbarpadding ">
-        <router-link to="/prospecting" class="navbar-item">Prospecting</router-link>
-        <router-link to="/data-fetching" class="navbar-item">Data-Fetching</router-link>
+        <router-link to="/data-fetching" class="navbar-item">Outil Entreprises</router-link>
+        <router-link to="/cities" class="navbar-item">Services Villes</router-link>
         <div class="navbar-item">
           <div class="buttons">
             <template v-if="$store.state.isAuthenticated">
@@ -102,8 +45,8 @@
     </div>
   </nav>
 
-  <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading': $store.state.isLoading }">
-  <div class="lds-dual-ring"></div>
+  <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading my-6': $store.state.isLoading }">
+  <div class="lds-dual-ring is-vcentered is-fullheight"></div>
 
 
 </div>
@@ -115,53 +58,36 @@
 
 </div>
 
-  <footer class="footer">
-    <div class="columns is-centered">
-      <div class="column is-11">
-
-        <div class="tile is-ancestor">
-          <div class="columns is-centered is-multiline">
-
-            <div class="tile is-parent is-vertical is-5">
-              <div class="tile is-child">
-                <div class="image is-128x128">
-                  <img  src="@/assets/images/Logo2_ecco.png">
+     <footer class="footer has-background-dark has-text-primary-light">
+      <div class="content">
+        <div class="columns">
+          <div class="column p-3">
+                <div class="image is-128x128 p-3">
+                  <img  src="@/assets/renovation_green.png" style="max-width:5em">
                 </div>
-                <div class="container">
-                  <p class="text has-text-white"> E-cco est une startup genevoise créée en 2022. Elle a pour but de participer à la transition énergétique en soutenant ses acteurs à pratiquer leur profession en bénéficiant des avancées digitales. </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="tile is-parent is-3">
-              <div class="tile is-child">
-                <div class="content has-text-white">
-                  <p class="title has-text-white is-5">  <br><br>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="tile is-parent is-4">
-              <div class="tile is-child">
-                <div class="content has-text-white">
-                  <p class="title has-text-white is-5"> Nous contacter: </p> <p><br><br>
-                    Téléphone: <br> 00 41 76 368 18 38 <br><br>
-                    Email: <br>marketing.team@energie-expert.ch <br><br>
-                  </p>
-                </div>
-              </div>
-            </div>
-
           </div>
+          <div class="column">
+            <h2 class="subtitle is-4 has-text-primary">A propos de nous</h2>
 
+            <!-- <p> Notre mission </p> -->
+            <p class="mr-6"> E-cco est une startup Genevoise fondée en 2022 par trois amis souscieux d'avoir un impact positif en contribuant à la transition énergétique par la voie du digital.</p>
+          </div>
+          <div class="column">
+            <h2 class="subtitle is-4 has-text-primary">Legal</h2>
+
+            <p> GDPR </p>
+            <p> Mentions légales </p>
+            <p>  </p>
+          </div>
+          <div class="column">
+            <h2 class="subtitle is-4 has-text-primary">Nous contacter</h2>
+
+            <p> 00 41 76 368 18 38 </p>
+            <p> Mentions légales </p>
+          </div>
         </div>
-
-
-    </div>
-   </div> 
-  </footer>
+      </div>
+    </footer>
 
 </template>
 
@@ -195,11 +121,23 @@ export default {
 
 
 <style lang="scss">
-$primary: #1d492b;
-$link: #f89209;
-$footer-background-color : #1d492b;
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet');
+
+
+$family-serif: "Libre Franklin", sans-serif;
+$family-primary: $family-serif;
+
+
+$primary: #53fab9;
+$link: #232128;
+$footer-background-color : #232128;
 $navbar-padding-horizontal:size-2;
-$navbar-item-color:#f89209;
+$navbar-item-color:#232128;
+$light:#BDFFE5;
+$dark: #232128;
 
 
 
@@ -211,15 +149,12 @@ $navbar-item-color:#f89209;
   flex-direction: column;
 }
 
+
 #app {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
-
-
-
 
 
 .lds-dual-ring {
@@ -264,5 +199,17 @@ $navbar-item-color:#f89209;
   padding-left: 3rem;
 }
 
+}
+
+.contenu {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.navbar-default { margin : 0 !important; }
+
+html,body{
+    overflow-x: hidden;
 }
 </style>

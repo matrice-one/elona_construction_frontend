@@ -7,7 +7,7 @@
 <ul>
     <li
     v-for="(selection, selectionIndex) of choix.profiles[profileIndexSelected].selections"
-    :key="selectionIndex" 
+    :key="selectionIndex"
     draggable="true"
     @dragstart="pickupSelection($event, selectionIndex, profileIndexSelected)"
     @dragover.prevent
@@ -16,7 +16,7 @@
     >
 
     <div class="tag is-medium is-primary is-light is-rounded my-1" > {{  selection.name }} <button class="delete" @click="onDeleteSelection(selectionIndex)"></button></div>
-              
+
 
     </li>
 </ul>
@@ -33,7 +33,7 @@
 export default {
 
     name: 'displayChoix',
- 
+
     data(){
         return {
 
@@ -43,18 +43,18 @@ export default {
     props: {
             choix: {
             type:Object,
-            
+
         },
         profileIndexSelected:{
         type:Number
         },
         selectionIndex: {
         type: Number,
-        
+
         },
 
     },
- 
+
 
 methods:{
     onDeleteSelection(selectionIndex){
@@ -80,16 +80,12 @@ methods:{
         fromSelectionIndex,
         toSelectionIndex
       })
-    },    
+    },
 
 
 },
 
 }
-
-
-
-
 
 
 </script>
