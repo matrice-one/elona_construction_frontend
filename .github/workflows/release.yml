@@ -22,8 +22,6 @@ jobs:
             
             ## Pull Requests
             
-            ${{ join(pullRequestData, '\n') }}
-            
           draft: false
           prerelease: false
           
