@@ -9,7 +9,7 @@ changelog:
   categories:
     - title: Exciting New Features 🎉
       labels:
-        - feature
+        - enhancement
 
     - title: Bugs that shall be no more 🛠
       labels:
